@@ -27,6 +27,11 @@ export const es: Translations = {
     sub: 'Aprendizajes, decisiones y reflexiones técnicas.',
     loading: 'Cargando posts…',
     error: 'No pude cargar los posts.',
+    pagination: {
+      prev: '← Anterior',
+      next: 'Siguiente →',
+      pageOf: (current: number, total: number) => `Página ${current} de ${total}`,
+    },
   },
   postDetail: {
     back: '← Todos los posts',
@@ -89,7 +94,7 @@ export const es: Translations = {
     },
   },
   now: {
-    title: 'Now',
+    title: 'Hoy',
     updated: 'Actualizado: Abril 2026',
     learning: {
       heading: 'Aprendiendo',

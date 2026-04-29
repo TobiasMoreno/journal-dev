@@ -1,6 +1,16 @@
 <section class="home-hero">
-  <h1 class="home-hero__title">{{ t().home.hero.titleLine1 }}<br />{{ t().home.hero.titleLine2 }}</h1>
-  <p class="home-hero__sub">{{ t().home.hero.sub }}</p>
+  <div class="home-hero__text">
+    <h1 class="home-hero__title">{{ t().home.hero.titleLine1 }}<br />{{ t().home.hero.titleLine2 }}</h1>
+    <p class="home-hero__sub">{{ t().home.hero.sub }}</p>
+  </div>
+  <img
+    class="home-hero__photo"
+    ngSrc="/img/Tobi.jpeg"
+    alt="Tobias Moreno"
+    width="400"
+    height="400"
+    priority
+  />
 </section>
 
 <section class="home-posts" aria-labelledby="home-posts-heading">

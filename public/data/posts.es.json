@@ -1,5 +1,50 @@
 [
   {
+    "id": "primer-año-como-developer",
+    "title": "1 año trabajando como developer: lo que cambió en mi forma de pensar",
+    "date": "2026-04-29",
+    "tags": ["career", "growth", "backend", "learning"],
+    "type": "career",
+    "level": "intro",
+    "summary": "Arranqué en marzo de 2025. Tenía dudas, pero confiaba en que podía adaptarme. Un año después el cambio más importante no fue técnico — fue mental: dejé de pensar desde el ticket y empecé a pensar desde el usuario.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "El comienzo",
+        "body": "Arranqué a trabajar en marzo de 2025.\n\nTenía dudas — muchas. Pero también confiaba en que iba a poder adaptarme.\n\nLo que no sabía era que lo que hoy parece difícil, con el tiempo se vuelve normal. No porque se vuelva más fácil — sino porque aparecen problemas más complejos."
+      },
+      {
+        "heading": "Lo primero que me sorprendió no fue la tecnología",
+        "body": "Fue el contexto: código legacy, tiempos reales de entrega, decisiones que impactan producción.\n\nY junto con eso, me encontré con algo más incómodo: había cosas que creía entender y en realidad no. AWS, testing E2E, pipelines, la importancia de entender el producto antes de tocar el código."
+      },
+      {
+        "heading": "Lo que fui haciendo diferente",
+        "body": "Al principio trabajaba en funcionalidades puntuales. Con el tiempo fui moviéndome en varios repositorios al mismo tiempo, entendiendo cómo interactúan distintos microservicios.\n\nEmpecé a prestarle más atención a cosas que antes ignoraba: estrategia de logging, testing más completo, debugging real, manejo de errores, validaciones, estructura del código."
+      },
+      {
+        "heading": "Problemas que enseñan",
+        "body": "Hubo situaciones concretas que marcaron el aprendizaje.\n\nUna fue una integración con políticas de riesgo internas, con muchos casos borde y bugs difíciles de reproducir. Otra fue un endpoint lento donde terminamos implementando SSE para manejar la espera de una evaluación asincrónica.\n\nEn los dos casos entendí lo mismo: resolver el ticket no es el trabajo. Entender el problema completo, sí."
+      },
+      {
+        "heading": "El cambio más importante",
+        "body": "Lo más fuerte no fue técnico. Fue mental.\n\nAntes pensaba en código a partir de un ticket: qué hace, cómo lo hago funcionar.\n\nHoy intento partir de lo que necesita el usuario. Ese cambio de perspectiva cambia completamente cómo encarás un problema — qué considerás, qué descartás, qué preguntas hacés antes de escribir una sola línea."
+      },
+      {
+        "heading": "Cómo pienso hoy",
+        "body": "Hoy intento frenar antes de codear. Entender bien el problema. Evaluar distintas opciones. Elegir la mejor solución, no la más rápida.\n\nNo siempre lo logro. Pero haberlo como hábito consciente ya cambia el resultado."
+      },
+      {
+        "heading": "En qué sigo trabajando",
+        "body": "Sigo teniendo mucho por aprender: patrones de diseño, arquitectura, sistemas distribuidos, nuevas formas de desarrollo como agentes y Spec Driven Development.\n\nTambién me dicen que tengo buena comunicación — y aún así la sigo trabajando. Precisamente porque sé lo que puede costar no hacerlo."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Un año de trabajo me cambió más la forma de pensar que las herramientas que aprendí. El primer cambio fue entender que el código vive en un contexto — legacy, producción, otros servicios. El más importante fue dejar de pensar desde el ticket y empezar a pensar desde el usuario. El que más trabajo me costó: frenar antes de codear."
+      }
+    ]
+  },
+  {
     "id": "comunicar-la-solucion",
     "title": "Tenía la solución. El problema era explicarla.",
     "date": "2026-04-29",

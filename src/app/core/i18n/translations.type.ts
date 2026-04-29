@@ -25,6 +25,11 @@ export interface Translations {
     sub: string;
     loading: string;
     error: string;
+    pagination: {
+      prev: string;
+      next: string;
+      pageOf: (current: number, total: number) => string;
+    };
   };
   postDetail: {
     back: string;

@@ -1,5 +1,50 @@
 [
   {
+    "id": "primer-año-como-developer",
+    "title": "1 year as a developer: what changed in how I think",
+    "date": "2026-04-29",
+    "tags": ["career", "growth", "backend", "learning"],
+    "type": "career",
+    "level": "intro",
+    "summary": "I started in March 2025. I had doubts, but trusted I could adapt. A year later the most important change wasn't technical — it was mental: I stopped thinking from the ticket and started thinking from the user.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "The beginning",
+        "body": "I started working in March 2025.\n\nI had doubts — a lot of them. But I also trusted that I'd be able to adapt.\n\nWhat I didn't know was that what feels hard today becomes normal with time. Not because it gets easier — but because more complex problems show up."
+      },
+      {
+        "heading": "The first surprise wasn't the technology",
+        "body": "It was the context: legacy code, real delivery timelines, decisions that impact production.\n\nAnd along with that, something more uncomfortable: there were things I thought I understood but didn't. AWS, E2E testing, pipelines, the importance of understanding the product before touching the code."
+      },
+      {
+        "heading": "What I started doing differently",
+        "body": "At first I worked on specific features. Over time I moved across multiple repositories at once, understanding how different microservices interact.\n\nI started paying closer attention to things I used to ignore: logging strategy, more thorough testing, real debugging, error handling, validations, code structure."
+      },
+      {
+        "heading": "Problems that teach",
+        "body": "There were concrete situations that shaped the learning.\n\nOne was an integration with internal risk policies — lots of edge cases and bugs that were hard to reproduce. Another was a slow endpoint where we ended up implementing SSE to handle the wait for an async evaluation.\n\nIn both cases I learned the same thing: solving the ticket isn't the job. Understanding the full problem is."
+      },
+      {
+        "heading": "The most important shift",
+        "body": "The biggest change wasn't technical. It was mental.\n\nBefore, I thought about code starting from a ticket: what it does, how to make it work.\n\nNow I try to start from what the user needs. That shift in perspective completely changes how you approach a problem — what you consider, what you discard, what questions you ask before writing a single line."
+      },
+      {
+        "heading": "How I think today",
+        "body": "Today I try to pause before coding. Understand the problem well. Evaluate different options. Choose the best solution, not the fastest one.\n\nI don't always manage it. But having it as a conscious habit already changes the outcome."
+      },
+      {
+        "heading": "What I'm still working on",
+        "body": "I still have a lot to learn: design patterns, architecture, distributed systems, new development approaches like agents and Spec Driven Development.\n\nPeople tell me I communicate well — and I still keep working on it. Precisely because I know what it can cost not to."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "A year of work changed how I think more than the tools I learned. The first shift was understanding that code lives in a context — legacy, production, other services. The most important was moving from ticket-first thinking to user-first thinking. The hardest one to build: pausing before coding."
+      }
+    ]
+  },
+  {
     "id": "comunicar-la-solucion",
     "title": "I had the answer. The problem was explaining it.",
     "date": "2026-04-29",

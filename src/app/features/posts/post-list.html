@@ -26,4 +26,43 @@
       </li>
     }
   </ul>
+
+  @if (totalPages() > 1) {
+    <nav class="pagination" aria-label="Post pagination">
+      <button
+        class="pagination__btn"
+        [class.pagination__btn--disabled]="currentPage() === 1"
+        [attr.disabled]="currentPage() === 1 ? true : null"
+        (click)="prevPage()"
+        [attr.aria-label]="t().postList.pagination.prev"
+      >
+        {{ t().postList.pagination.prev }}
+      </button>
+
+      <ol class="pagination__pages" role="list">
+        @for (page of pages(); track page) {
+          <li>
+            <button
+              class="pagination__page"
+              [class.pagination__page--active]="currentPage() === page"
+              [attr.aria-current]="currentPage() === page ? 'page' : null"
+              (click)="goToPage(page)"
+            >
+              {{ page }}
+            </button>
+          </li>
+        }
+      </ol>
+
+      <button
+        class="pagination__btn"
+        [class.pagination__btn--disabled]="currentPage() === totalPages()"
+        [attr.disabled]="currentPage() === totalPages() ? true : null"
+        (click)="nextPage()"
+        [attr.aria-label]="t().postList.pagination.next"
+      >
+        {{ t().postList.pagination.next }}
+      </button>
+    </nav>
+  }
 }

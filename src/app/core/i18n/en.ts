@@ -27,6 +27,11 @@ export const en: Translations = {
     sub: 'Learnings, decisions, and technical reflections.',
     loading: 'Loading posts…',
     error: "Couldn't load the posts.",
+    pagination: {
+      prev: '← Previous',
+      next: 'Next →',
+      pageOf: (current: number, total: number) => `Page ${current} of ${total}`,
+    },
   },
   postDetail: {
     back: '← All posts',
