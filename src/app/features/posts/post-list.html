@@ -1,0 +1,23 @@
+<header class="pl-header">
+  <h1 class="pl-header__title">Writing</h1>
+  <p class="pl-header__sub">Aprendizajes, decisiones y reflexiones técnicas.</p>
+</header>
+
+<ul class="post-list" role="list">
+  @for (post of posts; track post.id) {
+    <li class="post-list__item">
+      <a [routerLink]="['/posts', post.id]" class="post-list__link">
+        <span class="post-list__title">{{ post.title }}</span>
+        <span class="post-list__meta">
+          <span class="post-list__type">{{ post.type }}</span>
+          <span class="post-list__date">{{ post.date }}</span>
+        </span>
+      </a>
+      <div class="post-list__tags" aria-label="Tags">
+        @for (tag of post.tags; track tag) {
+          <span class="post-list__tag">{{ tag }}</span>
+        }
+      </div>
+    </li>
+  }
+</ul>

@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'JetBrains Mono', ui-monospace, 'Fira Code', monospace;
+
+  --color-surface: #ffffff;
+  --color-surface-dark: #0a0a0a;
+
+  --color-fg: #111111;
+  --color-fg-dark: #ededed;
+
+  --color-muted: #737373;
+  --color-muted-dark: #888888;
+
+  --color-border: #e5e5e5;
+  --color-border-dark: #1f1f1f;
+
+  --color-accent: #0070f3;
+  --color-accent-dark: #3291ff;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-fg);
+    font-family: var(--font-family-sans);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--color-surface-dark);
+      color: var(--color-fg-dark);
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background-color: #0070f3;
+    color: #fff;
+  }
+}

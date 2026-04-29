@@ -1,0 +1,74 @@
+.now-header {
+  margin-bottom: 2.5rem;
+}
+
+.now-header__title {
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+
+.now-header__date {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .now-header__date {
+    color: var(--color-muted-dark);
+  }
+}
+
+.now-section {
+  margin-bottom: 2rem;
+}
+
+.now-section__title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (prefers-color-scheme: dark) {
+  .now-section__title {
+    color: var(--color-muted-dark);
+    border-bottom-color: var(--color-border-dark);
+  }
+}
+
+.now-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.now-list li {
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.now-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--color-muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  .now-list li,
+  .now-list li::before {
+    color: var(--color-muted-dark);
+  }
+}
