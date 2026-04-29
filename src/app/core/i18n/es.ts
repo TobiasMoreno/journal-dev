@@ -105,7 +105,7 @@ export const es: Translations = {
     },
     reading: {
       heading: 'Leyendo',
-      items: ['Designing Data-Intensive Applications — Kleppmann', 'Release It! — Nygard'],
+      items: ['Cointeligencia, Vivir y trabajar con la IA — Ethan Mollick', 'Artificial, La nueva inteligencia y el contorno de lo humano — Mariano Sigman, Santiago Bilinkis'],
     },
   },
 };

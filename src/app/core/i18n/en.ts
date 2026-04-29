@@ -106,7 +106,7 @@ export const en: Translations = {
     },
     reading: {
       heading: 'Reading',
-      items: ['Designing Data-Intensive Applications — Kleppmann', 'Release It! — Nygard'],
+      items: ['Co-Intelligence: Living and Working with AI — Ethan Mollick', 'Artificial: The New Intelligence and the Boundaries of the Human — Mariano Sigman, Santiago Bilinkis'],
     },
   },
 };

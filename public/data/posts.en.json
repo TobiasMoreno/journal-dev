@@ -1,5 +1,38 @@
 [
   {
+    "id": "comunicar-la-solucion",
+    "title": "I had the answer. The problem was explaining it.",
+    "date": "2026-04-29",
+    "tags": ["career", "communication", "growth"],
+    "type": "career",
+    "level": "intro",
+    "summary": "I was the only one with the solution. But I couldn't get it across. That made me see something I'd been ignoring: having the answer isn't enough if you can't explain it. I started an oratory course, and what I'm learning goes well beyond speaking clearly.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "The answer that didn't land",
+        "body": "I had analyzed the problem. I had a clear solution. But when I tried to explain it, I wasn't clear, I didn't generate conviction, and the idea never reached where it needed to go.\n\nIt was uncomfortable. Not because I lacked technical knowledge — I was missing something different."
+      },
+      {
+        "heading": "What I understood",
+        "body": "Having the answer isn't enough if you can't communicate it.\n\nThat sounds obvious when you write it. But in the moment it hits differently: you know the solution was right, and yet the problem didn't get solved because you couldn't make others see it."
+      },
+      {
+        "heading": "The decision",
+        "body": "I decided to tackle it concretely: I started an oratory course.\n\nNot to speak beautifully. But because I want to grow into roles where communicating and aligning is a core part of the job. And if that's the goal, it makes sense to invest in the skill that makes it possible."
+      },
+      {
+        "heading": "What I'm learning",
+        "body": "The part that surprised me most: communicating well doesn't start when you speak. It starts when you listen.\n\nUnderstanding what the other person needs to hear — not just what you want to say — completely changes how you build an explanation. You can have the perfect arguments and still fail if you didn't frame them for the person receiving them."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "I had the answer and couldn't explain it. That showed me technical knowledge isn't enough if you can't communicate it. I started an oratory course and discovered that communicating well begins with listening: understanding what the other person needs before building what you're going to say."
+      }
+    ]
+  },
+  {
     "id": "spdd-fowler-ya-lo-hacia",
     "title": "SPDD on martinfowler.com: what my opsx workflow was missing",
     "date": "2026-04-29",

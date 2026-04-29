@@ -1,5 +1,38 @@
 [
   {
+    "id": "comunicar-la-solucion",
+    "title": "Tenía la solución. El problema era explicarla.",
+    "date": "2026-04-29",
+    "tags": ["career", "communication", "growth"],
+    "type": "career",
+    "level": "intro",
+    "summary": "Fui el único con la respuesta y no logré transmitirla. Eso me hizo ver algo que venía ignorando: tener la solución no alcanza si no podés comunicarla. Arranqué un curso de oratoria, y lo que estoy aprendiendo va más allá de hablar bien.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "La respuesta que no llegó",
+        "body": "Había analizado el problema. Tenía clara la solución. Pero cuando intenté explicarla, no fui claro, no generé convicción, y la idea no llegó a donde tenía que llegar.\n\nFue incómodo. No porque me faltara conocimiento técnico — me faltaba algo diferente."
+      },
+      {
+        "heading": "Lo que entendí",
+        "body": "Tener la respuesta no alcanza si no podés comunicarla.\n\nEso suena obvio escrito. Pero en el momento duele de forma distinta: sabés que la solución era correcta, y aun así el problema no se resolvió porque no lograste que los demás lo vieran."
+      },
+      {
+        "heading": "La decisión",
+        "body": "Decidí encararlo de forma concreta: arranqué un curso de oratoria.\n\nNo para hablar lindo. Sino porque quiero crecer hacia roles donde comunicar y alinear sea parte central del trabajo. Y si ese es el objetivo, tiene sentido invertir en la habilidad que lo hace posible."
+      },
+      {
+        "heading": "Lo que estoy aprendiendo",
+        "body": "La parte que más me sorprendió: comunicar bien no empieza cuando hablás. Empieza cuando escuchás.\n\nEntender qué necesita escuchar el otro — no solo qué querés decir vos — cambia completamente cómo construís una explicación. Podés tener los argumentos perfectos y fallar si no los ordenaste para el que los recibe."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Tuve la solución y no pude explicarla. Eso me mostró que el conocimiento técnico no alcanza si no podés comunicarlo. Arranqué un curso de oratoria y descubrí que comunicar bien empieza por escuchar: entender qué necesita el otro antes de construir lo que vas a decir."
+      }
+    ]
+  },
+  {
     "id": "spdd-fowler-ya-lo-hacia",
     "title": "SPDD en martinfowler.com: lo que mi flujo con opsx no tenía",
     "date": "2026-04-29",
