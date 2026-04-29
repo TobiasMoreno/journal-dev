@@ -1,25 +1,32 @@
 <section class="home-hero">
-  <h1 class="home-hero__title">Backend engineer.<br>Documentando la evolución.</h1>
+  <h1 class="home-hero__title">Backend engineer.<br />Documentando la evolución.</h1>
   <p class="home-hero__sub">
-    Aprendizajes técnicos, decisiones profesionales y errores reales.
-    Todo en público, todo sin filtro.
+    Aprendizajes técnicos, decisiones profesionales y errores reales. Todo en público, todo sin
+    filtro.
   </p>
 </section>
 
 <section class="home-posts" aria-labelledby="home-posts-heading">
   <h2 id="home-posts-heading" class="home-section-title">Writing</h2>
-  <ul class="post-list" role="list">
-    @for (post of posts; track post.id) {
-      <li class="post-list__item">
-        <a [routerLink]="['/posts', post.id]" class="post-list__link">
-          <span class="post-list__title">{{ post.title }}</span>
-          <span class="post-list__meta">
-            <span class="post-list__type">{{ post.type }}</span>
-            <span class="post-list__date">{{ post.date }}</span>
-          </span>
-        </a>
-      </li>
-    }
-  </ul>
-  <a routerLink="/posts" class="home-more-link">All posts &rarr;</a>
+
+  @if (isLoading()) {
+    <p class="home-status" role="status">Cargando posts…</p>
+  } @else if (error()) {
+    <p class="home-status home-status--error" role="alert">No pude cargar los posts.</p>
+  } @else {
+    <ul class="post-list" role="list">
+      @for (post of recentPosts(); track post.id) {
+        <li class="post-list__item">
+          <a [routerLink]="['/posts', post.id]" class="post-list__link">
+            <span class="post-list__title">{{ post.title }}</span>
+            <span class="post-list__meta">
+              <span class="post-list__type">{{ post.type }}</span>
+              <span class="post-list__date">{{ post.date | date: 'MMM d, y' }}</span>
+            </span>
+          </a>
+        </li>
+      }
+    </ul>
+    <a routerLink="/posts" class="home-more-link">All posts &rarr;</a>
+  }
 </section>

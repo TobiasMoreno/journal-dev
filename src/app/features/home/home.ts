@@ -1,25 +1,20 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-interface PostPreview {
-  id: string;
-  title: string;
-  date: string;
-  type: string;
-}
+import { PostService } from '../../core/services/post.service';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, DatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class HomeComponent {
-  readonly posts: PostPreview[] = [
-    { id: 'completable-future-intro', title: 'Mis primeros pasos con concurrencia en Java', date: 'Apr 28, 2026', type: 'learning' },
-    { id: 'nestjs-vs-spring-boot', title: 'NestJS vs Spring Boot: cuándo elegir cada uno', date: 'Apr 15, 2026', type: 'thinking' },
-    { id: 'async-errors', title: 'Los errores que cometí usando async por primera vez', date: 'Apr 01, 2026', type: 'failure' },
-    { id: 'distributed-systems-intro', title: 'Qué significa software escalable (de verdad)', date: 'Mar 20, 2026', type: 'learning' },
-  ];
+  private readonly postService = inject(PostService);
+
+  readonly isLoading = this.postService.isLoading;
+  readonly error = this.postService.error;
+  readonly recentPosts = computed(() => this.postService.posts().slice(0, 4));
 }

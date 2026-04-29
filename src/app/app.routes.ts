@@ -10,6 +10,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/posts/post-list').then(m => m.PostListComponent),
   },
   {
+    path: 'posts/:id',
+    loadComponent: () => import('./features/posts/post-detail').then(m => m.PostDetailComponent),
+  },
+  {
     path: 'now',
     loadComponent: () => import('./features/now/now').then(m => m.NowComponent),
   },

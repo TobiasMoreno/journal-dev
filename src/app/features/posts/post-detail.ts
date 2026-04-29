@@ -1,20 +1,22 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { PostService } from '../../core/services/post.service';
 
 @Component({
-  selector: 'app-post-list',
+  selector: 'app-post-detail',
   imports: [RouterLink, DatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './post-list.html',
-  styleUrl: './post-list.css',
+  templateUrl: './post-detail.html',
+  styleUrl: './post-detail.css',
 })
-export class PostListComponent {
+export class PostDetailComponent {
   private readonly postService = inject(PostService);
 
-  readonly posts = this.postService.posts;
+  readonly id = input.required<string>();
+
   readonly isLoading = this.postService.isLoading;
   readonly error = this.postService.error;
+  readonly post = computed(() => this.postService.posts().find((p) => p.id === this.id()));
 }

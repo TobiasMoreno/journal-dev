@@ -1,0 +1,52 @@
+<nav class="pd-back" aria-label="Back to writing">
+  <a routerLink="/posts" class="pd-back__link">&larr; All posts</a>
+</nav>
+
+@if (isLoading()) {
+  <p class="pd-status" role="status">Cargando…</p>
+} @else if (error()) {
+  <p class="pd-status pd-status--error" role="alert">No pude cargar este post.</p>
+} @else if (post(); as p) {
+  <article class="pd-article">
+    <header class="pd-header">
+      <h1 class="pd-header__title">{{ p.title }}</h1>
+      <p class="pd-header__meta">
+        <span class="pd-header__type">{{ p.type }}</span>
+        <span class="pd-header__sep" aria-hidden="true">·</span>
+        <span class="pd-header__level">{{ p.level }}</span>
+        <span class="pd-header__sep" aria-hidden="true">·</span>
+        <time [attr.datetime]="p.date" class="pd-header__date">
+          {{ p.date | date: 'MMMM d, y' }}
+        </time>
+      </p>
+      <div class="pd-header__tags" aria-label="Tags">
+        @for (tag of p.tags; track tag) {
+          <span class="pd-header__tag">{{ tag }}</span>
+        }
+      </div>
+    </header>
+
+    <p class="pd-summary">{{ p.summary }}</p>
+
+    @if (p.sections && p.sections.length > 0) {
+      @for (section of p.sections; track section.heading) {
+        <section class="pd-section">
+          <h2 class="pd-section__heading">{{ section.heading }}</h2>
+          <p class="pd-section__body">{{ section.body }}</p>
+        </section>
+      }
+    } @else {
+      <p class="pd-empty">Contenido en preparación.</p>
+    }
+
+    @if (p.linkedin) {
+      <footer class="pd-footer">
+        <a [href]="p.linkedin" target="_blank" rel="noopener noreferrer" class="pd-footer__link">
+          Ver versión en LinkedIn &rarr;
+        </a>
+      </footer>
+    }
+  </article>
+} @else {
+  <p class="pd-status" role="alert">Post no encontrado.</p>
+}

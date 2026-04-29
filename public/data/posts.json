@@ -1,0 +1,57 @@
+[
+  {
+    "id": "completable-future-intro",
+    "title": "Mis primeros pasos con concurrencia en Java",
+    "date": "2026-04-28",
+    "tags": ["java", "concurrency", "backend"],
+    "type": "learning",
+    "level": "medium",
+    "summary": "Aprendiendo CompletableFuture y async processing desde casos reales.",
+    "featured": true,
+    "linkedin": ""
+  },
+  {
+    "id": "nestjs-vs-spring-boot",
+    "title": "NestJS vs Spring Boot: cuándo elegir cada uno",
+    "date": "2026-04-15",
+    "tags": ["nestjs", "spring", "backend"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "Cuándo usar NestJS y cuándo Spring Boot, basado en lo que aprendí trabajando con ambos.",
+    "featured": true,
+    "linkedin": ""
+  },
+  {
+    "id": "async-errors",
+    "title": "Los errores que cometí usando async por primera vez",
+    "date": "2026-04-01",
+    "tags": ["async", "backend", "failure"],
+    "type": "failure",
+    "level": "intro",
+    "summary": "Tres errores reales con async que casi rompen producción y qué aprendí.",
+    "featured": false,
+    "linkedin": ""
+  },
+  {
+    "id": "distributed-systems-intro",
+    "title": "Qué significa software escalable (de verdad)",
+    "date": "2026-03-20",
+    "tags": ["architecture", "backend", "distributed-systems"],
+    "type": "learning",
+    "level": "deep",
+    "summary": "Más allá del marketing: qué hace que un sistema escale bajo presión real.",
+    "featured": true,
+    "linkedin": ""
+  },
+  {
+    "id": "career-pivot",
+    "title": "Por qué me enfoqué en sistemas distribuidos",
+    "date": "2026-03-10",
+    "tags": ["career", "backend"],
+    "type": "career",
+    "level": "intro",
+    "summary": "La decisión profesional que reordenó cómo elijo en qué invertir mi tiempo.",
+    "featured": false,
+    "linkedin": ""
+  }
+]

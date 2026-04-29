@@ -1,23 +1,116 @@
 <header class="about-header">
   <h1 class="about-header__title">About</h1>
+  <p class="about-header__sub">Quién soy, cómo trabajo, qué busco. Sin clichés.</p>
 </header>
 
-<div class="about-content">
-  <p>Hola, soy Tobias Moreno, Backend Engineer enfocado en sistemas distribuidos, resiliencia y escalabilidad.</p>
-
+<section class="about-section" aria-labelledby="about-id">
+  <h2 id="about-id" class="about-section__title">Identidad</h2>
   <p>
-    Este proyecto no es un portfolio. Es un sistema vivo donde documento mi evolución como ingeniero:
-    lo que aprendo, los errores que cometo, las decisiones que tomo.
+    Soy Tobias Moreno, Backend Engineer en
+    <a href="https://www.creditu.cl" target="_blank" rel="noopener noreferrer" class="about-link"
+      >Creditu</a
+    >, una fintech con foco en crédito digital. Vivo en Córdoba, Argentina, y vengo desarrollando
+    software hace {{ experience() }}.
+  </p>
+  <p>
+    Hoy trabajo con Java, Spring Boot y NestJS, en sistemas que mueven dinero real para gente real.
+    Eso ordena prioridades rápido: lo que rompe importa más que lo que se ve lindo en un demo.
+  </p>
+</section>
+
+<section class="about-section" aria-labelledby="about-how">
+  <h2 id="about-how" class="about-section__title">Cómo trabajo</h2>
+
+  <h3 class="about-card__title">Software es decisiones, no código.</h3>
+  <p>
+    Casi todos los problemas serios que vi en producción vinieron de una decisión chica que nadie
+    discutió: un default mal elegido, un timeout que no se conversó, una abstracción que se metió
+    "por las dudas". Por eso el código que más respeto es el que tiene un porqué visible.
   </p>
 
+  <h3 class="about-card__title">Mejor honesto que prolijo.</h3>
   <p>
-    Actualmente trabajo con Java, Spring Boot y NestJS. Me interesan los sistemas que escalan
-    bajo presión y los diseños que sobreviven al tiempo.
+    Hay cosas que todavía no domino bien — concurrencia avanzada es la que más estoy tratando de
+    entender hoy. Esa lista la actualizo seguido y no me molesta mostrarla: me parece más útil para
+    un equipo saber qué no sé, que pretender un perfil cerrado.
   </p>
 
-  <h2 class="about-section-title">Contacto</h2>
-  <ul class="about-links" role="list">
-    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="about-link">GitHub</a></li>
-    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="about-link">LinkedIn</a></li>
+  <h3 class="about-card__title">Aprender en público.</h3>
+  <p>
+    Este journal existe porque escribir lo que aprendo me obliga a entenderlo dos veces. Lo hago
+    también para que alguien que viene atrás no tenga que tropezar con los mismos errores.
+  </p>
+
+  <h3 class="about-card__title">Pragmatismo sobre dogma.</h3>
+  <p>
+    Microservicios cuando duele no tenerlos. Tests cuando el costo de romper supera el costo de
+    escribirlos. Reescribir cuando la deuda técnica empezó a frenar al equipo, no antes. La
+    ingeniería que defiendo es la que se mide en consecuencias, no en estética.
+  </p>
+</section>
+
+<section class="about-section" aria-labelledby="about-stack">
+  <h2 id="about-stack" class="about-section__title">Stack actual</h2>
+  <ul class="about-stack" role="list">
+    <li><strong>Lenguajes:</strong> Java, TypeScript, SQL</li>
+    <li><strong>Backend:</strong> Spring Boot, NestJS</li>
+    <li><strong>Infra:</strong> Docker, Kubernetes, AWS</li>
+    <li><strong>Datos:</strong> PostgreSQL, MongoDB, Redis</li>
+    <li><strong>Herramientas:</strong> Cursor, Claude Code, Codex</li>
   </ul>
-</div>
+</section>
+
+<section class="about-section" aria-labelledby="about-path">
+  <h2 id="about-path" class="about-section__title">Cómo llegué acá</h2>
+  <p>
+    Empecé como desarrollador full stack. Estuve un tiempo cubriendo frontend y backend hasta que
+    me di cuenta de que lo que más me enganchaba era el back: el diseño de APIs, las decisiones de
+    arquitectura, los problemas que aparecen cuando el sistema crece. Hoy ese es el lugar donde
+    quiero profundizar.
+  </p>
+</section>
+
+<section class="about-section" aria-labelledby="about-fit">
+  <h2 id="about-fit" class="about-section__title">Qué busco (y qué no)</h2>
+
+  <p class="about-fit__lead">Donde encajo bien:</p>
+  <ul class="about-fit__list" role="list">
+    <li>Equipos donde se discuten decisiones técnicas, no se ejecutan tickets a ciegas.</li>
+    <li>Productos backend con complejidad real: concurrencia, escala, integraciones críticas.</li>
+    <li>Culturas donde escribir un postmortem honesto se valora más que ocultar un bug.</li>
+  </ul>
+
+  <p class="about-fit__lead">Donde no encajo:</p>
+  <ul class="about-fit__list" role="list">
+    <li>Roles donde el "senior" decide y el resto ejecuta sin discutir.</li>
+    <li>Stacks elegidos por moda y no por problema.</li>
+    <li>Equipos sin tolerancia al error — donde nadie escribe nada porque todo va perfecto.</li>
+  </ul>
+</section>
+
+<section class="about-section" aria-labelledby="about-contact">
+  <h2 id="about-contact" class="about-section__title">Contacto</h2>
+  <ul class="about-links" role="list">
+    <li>
+      <a
+        href="https://github.com/TobiasMoreno"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="about-link"
+        >GitHub</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/tobiasmoreno/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="about-link"
+        >LinkedIn</a
+      >
+    </li>
+    <li>
+      <a href="mailto:tobiasmoreno.tm.21@gmail.com" class="about-link">Email</a>
+    </li>
+  </ul>
+</section>
