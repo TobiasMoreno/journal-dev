@@ -11,6 +11,7 @@ export type PostLevel = 'intro' | 'medium' | 'deep';
 export interface PostSection {
   heading: string;
   body: string;
+  image?: string;
 }
 
 export interface Post {

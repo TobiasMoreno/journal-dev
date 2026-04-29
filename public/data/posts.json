@@ -1,5 +1,43 @@
 [
   {
+    "id": "spdd-fowler-ya-lo-hacia",
+    "title": "SPDD en martinfowler.com: lo que mi flujo con opsx no tenía",
+    "date": "2026-04-29",
+    "tags": ["ai", "prompting", "workflow", "thinking"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "Uso SDD con opsx para estructurar cambios antes de implementarlos. Pero el artículo de Fowler sobre SPDD me mostró el gap: los prompts como artefactos gobernados. Esto es lo que propone, qué me faltaba, y la idea que más me cambió la perspectiva.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Lo reconocí de inmediato",
+        "body": "Cuando me pasaron el artículo de martinfowler.com sobre Structured-Prompt-Driven Development, no esperaba encontrar mi propio flujo de trabajo descrito en cada sección.\n\nYo uso SDD con opsx — un workflow donde los cambios se diseñan antes de implementarse, con contexto, restricciones y tareas explícitas. Pero la parte de los prompts como artefactos gobernados, eso no lo tenía. Lo que hacía era estructurar el qué y el cómo, pero el prompt que termina llegando al modelo quedaba implícito."
+      },
+      {
+        "heading": "Qué propone el artículo",
+        "body": "SPDD plantea que el problema con LLMs en equipos no es el modelo — es que los requisitos ambiguos escalan directo a defectos en producción.\n\nLa solución es el canvas REASONS: un prompt estructurado en siete dimensiones agrupadas en tres niveles.\n\nAbstract parts — intent & design:\nR — Requirements: qué problema resolvemos y cuál es la definición de done.\nE — Entities: entidades de dominio y sus relaciones.\nA — Approach: la estrategia de cómo vamos a cumplir los requisitos.\nS — Structure: dónde encaja el cambio en el sistema; componentes y dependencias.\n\nSpecific parts — execution:\nO — Operations: descomponer la estrategia abstracta en pasos concretos, testeables e implementables.\n\nCommon standards parts — governance:\nN — Norms: convenciones de ingeniería transversales (naming, observabilidad, defensive coding, etc.).\nS — Safeguards: límites no negociables (invariantes, performance, seguridad, etc.).\n\nEl flujo tiene seis pasos, desde la historia de usuario hasta los tests, con un paso intermedio donde el modelo analiza el codebase antes de generar cualquier código.",
+        "image": "/data/spdd-reason-canvas.svg"
+      },
+      {
+        "heading": "Lo que me faltaba ver",
+        "body": "Con opsx tengo la estructura: exploración, propuesta, tareas, implementación. Pero el prompt que finalmente ejecuta la tarea no está formalizado. Queda en mi cabeza o en el contexto de la conversación.\n\nEl principio que más me impactó: 'When reality diverges, fix the prompt first — then update the code.' Yo hacía lo opuesto — ajustaba el código y el prompt quedaba obsoleto. Eso rompe la trazabilidad entre intención e implementación."
+      },
+      {
+        "heading": "La frase que reencuadra todo",
+        "body": "'Software development isn't a contest of model IQ. It's a contest of engineer cognitive bandwidth — how clearly we can think, frame problems, and make decisions.'\n\nEl cuello de botella no es el modelo. Somos nosotros, y qué tan bien articulamos el problema antes de delegarlo. SPDD no es una forma de usar mejor la IA — es una forma de pensar mejor antes de usarla."
+      },
+      {
+        "heading": "Para quién funciona",
+        "body": "El artículo es honesto: SPDD no es para todos los contextos. Brilla con alta repetibilidad, trazabilidad para auditorías, o equipos que necesitan consistencia. No funciona bien en dominios mal definidos — si el prompt está sobre arenas movedizas, el código también.\n\nPara mi contexto — backend en una fintech, lógica de negocio compleja — encaja. Lo que voy a incorporar es formalizar los prompts de cada tarea como artefactos explícitos dentro del flujo de opsx."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "SPDD trata los prompts como artefactos gobernados, no como texto desechable. Yo usaba SDD con opsx para estructurar cambios, pero el prompt final quedaba implícito. El artículo de Fowler pone nombre al gap y da un framework concreto: el canvas REASONS. La idea que me quedó: el cuello de botella no es el modelo, es qué tan bien articulamos el problema antes de delegarlo."
+      }
+    ]
+  },
+  {
     "id": "completable-future-intro",
     "title": "Mis primeros pasos con concurrencia en Java",
     "date": "2026-04-28",
