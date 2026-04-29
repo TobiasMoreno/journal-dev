@@ -1,18 +1,15 @@
 <section class="home-hero">
-  <h1 class="home-hero__title">Backend engineer.<br />Documentando la evolución.</h1>
-  <p class="home-hero__sub">
-    Aprendizajes técnicos, decisiones profesionales y errores reales. Todo en público, todo sin
-    filtro.
-  </p>
+  <h1 class="home-hero__title">{{ t().home.hero.titleLine1 }}<br />{{ t().home.hero.titleLine2 }}</h1>
+  <p class="home-hero__sub">{{ t().home.hero.sub }}</p>
 </section>
 
 <section class="home-posts" aria-labelledby="home-posts-heading">
-  <h2 id="home-posts-heading" class="home-section-title">Posteos</h2>
+  <h2 id="home-posts-heading" class="home-section-title">{{ t().home.posts.heading }}</h2>
 
   @if (isLoading()) {
-    <p class="home-status" role="status">Cargando posts…</p>
+    <p class="home-status" role="status">{{ t().home.posts.loading }}</p>
   } @else if (error()) {
-    <p class="home-status home-status--error" role="alert">No pude cargar los posts.</p>
+    <p class="home-status home-status--error" role="alert">{{ t().home.posts.error }}</p>
   } @else {
     <ul class="post-list" role="list">
       @for (post of recentPosts(); track post.id) {
@@ -27,6 +24,6 @@
         </li>
       }
     </ul>
-    <a routerLink="/posts" class="home-more-link">All posts &rarr;</a>
+    <a routerLink="/posts" class="home-more-link">{{ t().home.posts.allPosts }}</a>
   }
 </section>

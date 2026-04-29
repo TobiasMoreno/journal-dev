@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
   selector: 'app-now',
@@ -6,4 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './now.html',
   styleUrl: './now.css',
 })
-export class NowComponent {}
+export class NowComponent {
+  readonly t = inject(LanguageService).translations;
+}

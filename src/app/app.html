@@ -3,10 +3,17 @@
     <nav class="app-nav" aria-label="Main navigation">
       <a routerLink="/" class="app-nav__brand">Tobias Moreno</a>
       <ul class="app-nav__links" role="list">
-        <li><a routerLink="/posts" routerLinkActive="app-nav__link--active" class="app-nav__link">Posts</a></li>
-        <li><a routerLink="/now" routerLinkActive="app-nav__link--active" class="app-nav__link">Hoy</a></li>
-        <li><a routerLink="/about" routerLinkActive="app-nav__link--active" class="app-nav__link">Sobre Mi</a></li>
+        <li><a routerLink="/posts" routerLinkActive="app-nav__link--active" class="app-nav__link">{{ t().nav.posts }}</a></li>
+        <li><a routerLink="/now" routerLinkActive="app-nav__link--active" class="app-nav__link">{{ t().nav.now }}</a></li>
+        <li><a routerLink="/about" routerLinkActive="app-nav__link--active" class="app-nav__link">{{ t().nav.about }}</a></li>
       </ul>
+      <button
+        class="lang-toggle"
+        (click)="toggleLang()"
+        [attr.aria-label]="currentLang() === 'es' ? 'Switch to English' : 'Cambiar a Español'"
+      >
+        {{ currentLang() === 'es' ? 'EN' : 'ES' }}
+      </button>
     </nav>
   </header>
 
@@ -15,7 +22,7 @@
   </main>
 
   <footer class="app-footer">
-    <p class="app-footer__text">Tobias Moreno &mdash; Backend Engineer</p>
+    <p class="app-footer__text">Tobias Moreno &mdash; {{ t().footer.role }}</p>
     <div class="app-footer__links">
       <a href="https://github.com/TobiasMoreno" target="_blank" rel="noopener noreferrer" class="app-footer__link">GitHub</a>
       <a href="https://www.linkedin.com/in/tobiasmoreno/" target="_blank" rel="noopener noreferrer" class="app-footer__link">LinkedIn</a>

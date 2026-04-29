@@ -1,0 +1,193 @@
+[
+  {
+    "id": "spdd-fowler-ya-lo-hacia",
+    "title": "SPDD on martinfowler.com: what my opsx workflow was missing",
+    "date": "2026-04-29",
+    "tags": ["ai", "prompting", "workflow", "thinking"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "I use SDD with opsx to structure changes before implementing them. But Fowler's article on SPDD showed me the gap: prompts as governed artifacts. This is what it proposes, what I was missing, and the idea that most changed my perspective.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "I recognized it immediately",
+        "body": "When someone sent me the martinfowler.com article on Structured-Prompt-Driven Development, I didn't expect to find my own workflow described in every section.\n\nI use SDD with opsx — a workflow where changes are designed before being implemented, with explicit context, constraints, and tasks. But the part about prompts as governed artifacts — that I didn't have. I was structuring the what and the how, but the prompt that ultimately reached the model stayed implicit."
+      },
+      {
+        "heading": "What the article proposes",
+        "body": "SPDD argues that the problem with LLMs in teams isn't the model — it's that ambiguous requirements scale directly into production defects.\n\nThe solution is the REASONS canvas: a structured prompt across seven dimensions grouped into three levels.\n\nAbstract parts — intent & design:\nR — Requirements: what problem we're solving and what the definition of done is.\nE — Entities: domain entities and their relationships.\nA — Approach: the strategy for how we'll meet the requirements.\nS — Structure: where the change fits in the system; components and dependencies.\n\nSpecific parts — execution:\nO — Operations: break down the abstract strategy into concrete, testable, implementable steps.\n\nCommon standards parts — governance:\nN — Norms: cross-cutting engineering conventions (naming, observability, defensive coding, etc.).\nS — Safeguards: non-negotiable limits (invariants, performance, security, etc.).\n\nThe flow has six steps, from user story to tests, with an intermediate step where the model analyzes the codebase before generating any code.",
+        "image": "/data/spdd-reason-canvas.svg"
+      },
+      {
+        "heading": "What I was missing",
+        "body": "With opsx I have the structure: exploration, proposal, tasks, implementation. But the prompt that ultimately executes the task isn't formalized. It lives in my head or in the conversation context.\n\nThe principle that hit me hardest: 'When reality diverges, fix the prompt first — then update the code.' I was doing the opposite — adjusting the code while the prompt went stale. That breaks the traceability between intent and implementation."
+      },
+      {
+        "heading": "The phrase that reframes everything",
+        "body": "'Software development isn't a contest of model IQ. It's a contest of engineer cognitive bandwidth — how clearly we can think, frame problems, and make decisions.'\n\nThe bottleneck isn't the model. It's us, and how well we articulate the problem before delegating it. SPDD isn't a way to use AI better — it's a way to think better before using it."
+      },
+      {
+        "heading": "Who it works for",
+        "body": "The article is honest: SPDD isn't for every context. It shines with high repeatability, traceability for audits, or teams that need consistency. It doesn't work well in poorly defined domains — if the prompt is on quicksand, so is the code.\n\nFor my context — backend at a fintech, complex business logic — it fits. What I'll incorporate is formalizing the prompts for each task as explicit artifacts within the opsx workflow."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "SPDD treats prompts as governed artifacts, not disposable text. I was using SDD with opsx to structure changes, but the final prompt stayed implicit. Fowler's article names the gap and provides a concrete framework: the REASONS canvas. The idea I'm taking away: the bottleneck isn't the model — it's how well we articulate the problem before delegating it."
+      }
+    ]
+  },
+  {
+    "id": "feedback-que-costo-escuchar",
+    "title": "They told me I lacked depth. They were right.",
+    "date": "2026-03-20",
+    "tags": ["java", "concurrency", "backend", "career"],
+    "type": "learning",
+    "level": "medium",
+    "summary": "I wanted to know where I stood. I asked a developer friend for an honest code review, and the feedback was precise: solid code, solid tests, but no depth in concurrency and distributed systems. That's how I started truly understanding how concurrent execution works in Java.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "The feedback I didn't want to hear",
+        "body": "At some point I wanted to know where I really stood. Not with metrics or courses — but with someone who could look at my code and tell me something honest. I asked a developer friend for an unfiltered code review.\n\nThe feedback was precise: solid fundamentals, good testing, clean code. But you lack depth in concurrency and distributed systems.\n\nIt wasn't harsh. It was accurate. And it made me see something I was ignoring: I was comfortable solving known problems, but I wasn't ready for systems that scale under real load."
+      },
+      {
+        "heading": "What I started studying",
+        "body": "I started with the most basic thing I didn't truly understand: CompletableFuture, async execution, the real difference between sync and async, how to avoid unnecessary blocking.\n\nBut the problem wasn't the API. It was the mindset."
+      },
+      {
+        "heading": "The root mistake",
+        "body": "The problem wasn't that I didn't know the theory. I knew it by heart: threads, locks, async execution, how a thread pool works.\n\nThe problem was that in practice I didn't apply it. I wrote code without asking myself whether it blocked, without thinking about which thread was running that operation, without considering what would happen under load. The theory was in my head but never reached my decisions."
+      },
+      {
+        "heading": "What changed",
+        "body": "Now when I write code I think differently: what thread runs this? Does it block? What happens with 500 simultaneous requests?\n\nI don't have everything figured out. I'm still learning patterns like retry, circuit breaker, and timeouts. But I went from using tools to understanding them."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "I wanted to know where I stood and asked for an honest code review. The result: solid code with no depth in concurrency. I started studying CompletableFuture and async execution, and found a root mistake: confusing 'it works' with 'it scales'. That mindset shift is what changed me most."
+      }
+    ]
+  },
+  {
+    "id": "errores-backend-developer",
+    "title": "Three mistakes I made thinking 'it works' was enough",
+    "date": "2025-06-01",
+    "tags": ["backend", "architecture", "failure"],
+    "type": "failure",
+    "level": "intro",
+    "summary": "At first my success metric was simple: does it run? Good. I later understood that was the bare minimum, not the standard.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "When 'it works' was enough",
+        "body": "At first my success metric was simple: does it run? Good. That was it. I didn't think about scalability, latency, or what would happen if a neighboring service failed. I made things work and called it done."
+      },
+      {
+        "heading": "Mistake 1: solving the ticket, ignoring the system",
+        "body": "I focused on the specific problem I was asked to solve. I didn't think about how that code interacted with everything else.\n\nIt worked. But in production, under load, with other services in play, 'working' wasn't enough. I learned that every change has a blast radius, and ignoring it is a decision, not an oversight."
+      },
+      {
+        "heading": "Mistake 2: trusting the framework to solve everything",
+        "body": "I used NestJS and Spring Boot as black boxes. If it worked, great. If not, time to search Stack Overflow.\n\nThe problem showed up when the errors were systemic, not the library's fault. Without understanding what was happening underneath, I couldn't diagnose anything."
+      },
+      {
+        "heading": "Mistake 3: not questioning what already works",
+        "body": "If something ran, I left it alone. I didn't analyze whether it could scale, whether it was the best solution, whether it would fail on edge cases.\n\nThat habit accumulates silent technical debt. The kind that one day explodes in production and nobody knows why."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Three mistakes from the same root: thinking 'it works' was the goal. Ignoring the system, trusting the framework without understanding it, and not questioning what runs. The difference between programming and designing systems is exactly there."
+      }
+    ]
+  },
+  {
+    "id": "construyendo-camino-backend",
+    "title": "When I stopped asking myself which technology to learn next",
+    "date": "2026-03-20",
+    "tags": ["career", "backend", "distributed-systems"],
+    "type": "career",
+    "level": "intro",
+    "summary": "I spent years accumulating frameworks. The real shift was stopping thinking about technologies and starting to think about what kind of problems I want to solve.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "The technology collector",
+        "body": "For a long time my growth strategy was to accumulate: Angular, Spring Boot, Vue, NestJS, Docker. If something new came out, I wanted to learn it.\n\nIt wasn't a bad strategy. But at some point I realized I had a lot of tools and little clarity about what problems I wanted to solve with them."
+      },
+      {
+        "heading": "The question that changed everything",
+        "body": "I stopped asking 'what technology am I missing?' and started asking 'what kind of problems do I want to solve?'\n\nThe answer was clear: distributed systems, concurrency, resilience, scalability. Not from theory, but applying them in real projects."
+      },
+      {
+        "heading": "What I still don't know",
+        "body": "I don't have it figured out. I'm still learning advanced patterns, system design under load, how to make architecture decisions with real context.\n\nI don't mind showing that. I think it's more useful for someone reading this to know the path is long, rather than pretending I've already arrived."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "I went from collecting frameworks to choosing which kind of problems to go deep on. The change wasn't learning fewer things — it was learning with direction. Today that direction is distributed systems and high-complexity backend."
+      }
+    ]
+  },
+  {
+    "id": "pensar-en-sistemas",
+    "title": "The code can be fine and the system can still fail",
+    "date": "2026-03-10",
+    "tags": ["architecture", "backend", "thinking"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "It took me a while to understand that writing good code and designing good systems are different skills. Here's the difference and why it matters.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "The endpoint that worked perfectly",
+        "body": "I had a well-written endpoint. Validations, error handling, passing tests. Everything clean.\n\nIn staging it took 15 seconds under concurrent load. Nobody had thought about it because nobody asked 'what happens with 1000 simultaneous requests?'. The code was fine. The system wasn't."
+      },
+      {
+        "heading": "The difference",
+        "body": "Writing code is solving a specific problem and making it work.\n\nThinking in systems is understanding how the parts interact, anticipating failures, designing for scale. They're not the same thing, and for a long time I assumed that if the first was done right, the second followed automatically."
+      },
+      {
+        "heading": "The mindset shift",
+        "body": "Now before implementing I ask myself three questions: what happens if this fails? How does it scale? What impact does it have on the rest of the system?\n\nI don't always have the answers. But having formulated them already changes how I write the code."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "The code can be correct and the system can still fail. Writing good code and designing good systems are different skills. The difference is whether you're thinking only about the specific problem, or about how that code lives inside something larger."
+      }
+    ]
+  },
+  {
+    "id": "por-que-journal-dev",
+    "title": "Why I started writing in public (and what I want to avoid)",
+    "date": "2026-03-01",
+    "tags": ["career", "writing"],
+    "type": "career",
+    "level": "intro",
+    "summary": "I had projects but something was missing: showing the real process, including the mistakes. This journal is that.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Something was missing",
+        "body": "I had projects. I had code on GitHub. I had experience working in production. But something was missing: showing the real process.\n\nNot the final result. Not the polished code. The process — including the mistakes, the doubts, the changes of direction."
+      },
+      {
+        "heading": "What this journal is (and what it isn't)",
+        "body": "It's not a portfolio. It's not designed to convince anyone I'm good.\n\nIt's a record of how I think, how I learn, how I evolve. A place to think out loud and for someone coming after to find something useful in what I've already stumbled on."
+      },
+      {
+        "heading": "What I want to avoid",
+        "body": "Showing only what went well. Hiding the mistakes. Writing posts where everything makes sense from the start.\n\nThat's not learning in public. That's marketing disguised as a journal."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "I started journal-dev to show the process, not the results. It's not a portfolio or a tutorial blog. It's a place where I write what I learn, what challenges me, and what I haven't figured out yet. If any of it is useful to someone else, even better."
+      }
+    ]
+  }
+]

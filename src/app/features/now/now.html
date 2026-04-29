@@ -1,31 +1,33 @@
 <header class="now-header">
-  <h1 class="now-header__title">Now</h1>
-  <p class="now-header__date">Actualizado: Abril 2026</p>
+  <h1 class="now-header__title">{{ t().now.title }}</h1>
+  <p class="now-header__date">{{ t().now.updated }}</p>
 </header>
 
 <div class="now-content">
   <section class="now-section" aria-labelledby="learning-heading">
-    <h2 id="learning-heading" class="now-section__title">Aprendiendo</h2>
+    <h2 id="learning-heading" class="now-section__title">{{ t().now.learning.heading }}</h2>
     <ul class="now-list" role="list">
-      <li>Concurrencia en Java con CompletableFuture y Virtual Threads</li>
-      <li>Patrones de resiliencia: circuit breaker, bulkhead, retry</li>
-      <li>Arquitectura de sistemas distribuidos</li>
+      @for (item of t().now.learning.items; track item) {
+        <li>{{ item }}</li>
+      }
     </ul>
   </section>
 
   <section class="now-section" aria-labelledby="building-heading">
-    <h2 id="building-heading" class="now-section__title">Construyendo</h2>
+    <h2 id="building-heading" class="now-section__title">{{ t().now.building.heading }}</h2>
     <ul class="now-list" role="list">
-      <li>Este journal — journal-dev</li>
-      <li>Explorando diseño de APIs resilientes en Spring Boot</li>
+      @for (item of t().now.building.items; track item) {
+        <li>{{ item }}</li>
+      }
     </ul>
   </section>
 
   <section class="now-section" aria-labelledby="reading-heading">
-    <h2 id="reading-heading" class="now-section__title">Leyendo</h2>
+    <h2 id="reading-heading" class="now-section__title">{{ t().now.reading.heading }}</h2>
     <ul class="now-list" role="list">
-      <li>Designing Data-Intensive Applications — Kleppmann</li>
-      <li>Release It! — Nygard</li>
+      @for (item of t().now.reading.items; track item) {
+        <li>{{ item }}</li>
+      }
     </ul>
   </section>
 </div>

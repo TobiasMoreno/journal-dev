@@ -1,0 +1,193 @@
+[
+  {
+    "id": "spdd-fowler-ya-lo-hacia",
+    "title": "SPDD en martinfowler.com: lo que mi flujo con opsx no tenía",
+    "date": "2026-04-29",
+    "tags": ["ai", "prompting", "workflow", "thinking"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "Uso SDD con opsx para estructurar cambios antes de implementarlos. Pero el artículo de Fowler sobre SPDD me mostró el gap: los prompts como artefactos gobernados. Esto es lo que propone, qué me faltaba, y la idea que más me cambió la perspectiva.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Lo reconocí de inmediato",
+        "body": "Cuando me pasaron el artículo de martinfowler.com sobre Structured-Prompt-Driven Development, no esperaba encontrar mi propio flujo de trabajo descrito en cada sección.\n\nYo uso SDD con opsx — un workflow donde los cambios se diseñan antes de implementarse, con contexto, restricciones y tareas explícitas. Pero la parte de los prompts como artefactos gobernados, eso no lo tenía. Lo que hacía era estructurar el qué y el cómo, pero el prompt que termina llegando al modelo quedaba implícito."
+      },
+      {
+        "heading": "Qué propone el artículo",
+        "body": "SPDD plantea que el problema con LLMs en equipos no es el modelo — es que los requisitos ambiguos escalan directo a defectos en producción.\n\nLa solución es el canvas REASONS: un prompt estructurado en siete dimensiones agrupadas en tres niveles.\n\nAbstract parts — intent & design:\nR — Requirements: qué problema resolvemos y cuál es la definición de done.\nE — Entities: entidades de dominio y sus relaciones.\nA — Approach: la estrategia de cómo vamos a cumplir los requisitos.\nS — Structure: dónde encaja el cambio en el sistema; componentes y dependencias.\n\nSpecific parts — execution:\nO — Operations: descomponer la estrategia abstracta en pasos concretos, testeables e implementables.\n\nCommon standards parts — governance:\nN — Norms: convenciones de ingeniería transversales (naming, observabilidad, defensive coding, etc.).\nS — Safeguards: límites no negociables (invariantes, performance, seguridad, etc.).\n\nEl flujo tiene seis pasos, desde la historia de usuario hasta los tests, con un paso intermedio donde el modelo analiza el codebase antes de generar cualquier código.",
+        "image": "/data/spdd-reason-canvas.svg"
+      },
+      {
+        "heading": "Lo que me faltaba ver",
+        "body": "Con opsx tengo la estructura: exploración, propuesta, tareas, implementación. Pero el prompt que finalmente ejecuta la tarea no está formalizado. Queda en mi cabeza o en el contexto de la conversación.\n\nEl principio que más me impactó: 'When reality diverges, fix the prompt first — then update the code.' Yo hacía lo opuesto — ajustaba el código y el prompt quedaba obsoleto. Eso rompe la trazabilidad entre intención e implementación."
+      },
+      {
+        "heading": "La frase que reencuadra todo",
+        "body": "'Software development isn't a contest of model IQ. It's a contest of engineer cognitive bandwidth — how clearly we can think, frame problems, and make decisions.'\n\nEl cuello de botella no es el modelo. Somos nosotros, y qué tan bien articulamos el problema antes de delegarlo. SPDD no es una forma de usar mejor la IA — es una forma de pensar mejor antes de usarla."
+      },
+      {
+        "heading": "Para quién funciona",
+        "body": "El artículo es honesto: SPDD no es para todos los contextos. Brilla con alta repetibilidad, trazabilidad para auditorías, o equipos que necesitan consistencia. No funciona bien en dominios mal definidos — si el prompt está sobre arenas movedizas, el código también.\n\nPara mi contexto — backend en una fintech, lógica de negocio compleja — encaja. Lo que voy a incorporar es formalizar los prompts de cada tarea como artefactos explícitos dentro del flujo de opsx."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "SPDD trata los prompts como artefactos gobernados, no como texto desechable. Yo usaba SDD con opsx para estructurar cambios, pero el prompt final quedaba implícito. El artículo de Fowler pone nombre al gap y da un framework concreto: el canvas REASONS. La idea que me quedó: el cuello de botella no es el modelo, es qué tan bien articulamos el problema antes de delegarlo."
+      }
+    ]
+  },
+  {
+    "id": "feedback-que-costo-escuchar",
+    "title": "Me dijeron que me faltaba profundidad. Tenían razón.",
+    "date": "2026-03-20",
+    "tags": ["java", "concurrency", "backend", "career"],
+    "type": "learning",
+    "level": "medium",
+    "summary": "Quise saber dónde estaba parado. Le pedí un code review honesto a un amigo desarrollador y el feedback fue preciso: buen código, buenos tests, pero sin profundidad en concurrencia y sistemas distribuidos. Así empecé a entender de verdad cómo funciona la ejecución concurrente en Java.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "El feedback que no quería escuchar",
+        "body": "En algún momento quise saber dónde estaba parado de verdad. No con métricas ni con cursos — sino con alguien que pudiera mirar mi código y decirme algo honesto. Le pedí a un amigo desarrollador un code review sin filtro.\n\nEl feedback fue preciso: buenos fundamentos, buen testing, buen código. Pero te falta profundidad en concurrencia y sistemas distribuidos.\n\nNo fue duro. Fue exacto. Y me hizo ver algo que estaba ignorando: era cómodo resolviendo problemas conocidos, pero no estaba preparado para sistemas que escalan bajo carga real."
+      },
+      {
+        "heading": "Qué empecé a estudiar",
+        "body": "Arranqué por lo más básico que no entendía de verdad: CompletableFuture, ejecución asincrónica, diferencia real entre sync y async, cómo evitar bloqueos innecesarios.\n\nPero el problema no era la API. Era la mentalidad."
+      },
+      {
+        "heading": "El error de fondo",
+        "body": "El problema no era que no sabía la teoría. Me la sabía de memoria: threads, bloqueos, ejecución asincrónica, cómo funciona un thread pool.\n\nEl problema era que en la práctica no lo tenía en cuenta. Escribía código sin preguntarme si bloqueaba, sin pensar en qué thread ejecutaba esa operación, sin considerar qué pasaba bajo carga. La teoría estaba en mi cabeza pero no llegaba a mis decisiones."
+      },
+      {
+        "heading": "Lo que cambió",
+        "body": "Ahora cuando escribo código pienso distinto: ¿qué thread ejecuta esto? ¿bloquea? ¿qué pasa con 500 requests simultáneos?\n\nNo tengo todo resuelto. Todavía estoy aprendiendo patrones como retry, circuit breaker y timeouts. Pero pasé de usar herramientas a entenderlas."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Quise saber dónde estaba parado y pedí un code review honesto. El resultado: buen código sin profundidad en concurrencia. Empecé a estudiar CompletableFuture y ejecución asincrónica, y me encontré con un error de fondo: confundía 'funciona' con 'escala'. Ese cambio de mentalidad es lo que más me cambió."
+      }
+    ]
+  },
+  {
+    "id": "errores-backend-developer",
+    "title": "Tres errores que cometí creyendo que 'funciona' era suficiente",
+    "date": "2025-06-01",
+    "tags": ["backend", "architecture", "failure"],
+    "type": "failure",
+    "level": "intro",
+    "summary": "Al principio mi métrica de éxito era simple: ¿corre? Bien. Tarde entendí que eso era el piso mínimo, no el estándar.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Cuando 'funciona' era suficiente",
+        "body": "Al principio mi métrica de éxito era simple: ¿corre? Bien. Eso era todo. No pensaba en escalabilidad, ni en latencia, ni en qué pasaba si el servicio de al lado fallaba. Hacía que las cosas funcionaran y lo llamaba listo."
+      },
+      {
+        "heading": "Error 1: resolver el ticket, ignorar el sistema",
+        "body": "Me enfocaba en el problema puntual que me pedían. No pensaba en cómo ese código interactuaba con el resto.\n\nFuncionaba. Pero en producción, bajo carga, con otros servicios en juego, 'funcionar' no alcanzaba. Aprendí que cada cambio tiene blast radius y que ignorarlo es una decisión, no una omisión."
+      },
+      {
+        "heading": "Error 2: confiar en que el framework resolvía todo",
+        "body": "Usaba NestJS y Spring Boot como cajas negras. Si funcionaba, bien. Si no, a buscar en Stack Overflow.\n\nEl problema apareció cuando los errores eran propios del sistema, no de la librería. Sin entender qué pasaba por debajo, no podía diagnosticar nada."
+      },
+      {
+        "heading": "Error 3: no cuestionar lo que ya funciona",
+        "body": "Si algo andaba, lo dejaba. No analizaba si podía escalar, si era la mejor solución, si iba a fallar en edge cases.\n\nEsa costumbre acumula deuda técnica silenciosa. La que un día explota en producción y nadie sabe por qué."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Tres errores del mismo origen: pensar que 'funciona' era el objetivo. Ignorar el sistema, confiar en el framework sin entenderlo, y no cuestionar lo que anda. La diferencia entre programar y diseñar sistemas está exactamente ahí."
+      }
+    ]
+  },
+  {
+    "id": "construyendo-camino-backend",
+    "title": "Cuándo dejé de preguntarme qué tecnología aprender",
+    "date": "2026-03-20",
+    "tags": ["career", "backend", "distributed-systems"],
+    "type": "career",
+    "level": "intro",
+    "summary": "Pasé años acumulando frameworks. El cambio real fue dejar de pensar en tecnologías y empezar a pensar en qué tipo de problemas quiero resolver.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "El coleccionista de tecnologías",
+        "body": "Durante mucho tiempo mi estrategia de crecimiento era acumular: Angular, Spring Boot, Vue, NestJS, Docker. Si salía algo nuevo, quería aprenderlo.\n\nNo era mala estrategia. Pero en algún punto me di cuenta de que tenía muchas herramientas y poca claridad sobre qué problemas quería resolver con ellas."
+      },
+      {
+        "heading": "La pregunta que cambió todo",
+        "body": "Dejé de preguntarme '¿qué tecnología me falta aprender?' y empecé a preguntarme '¿qué tipo de problemas quiero resolver?'\n\nLa respuesta fue clara: sistemas distribuidos, concurrencia, resiliencia, escalabilidad. No desde la teoría, sino aplicándolos en proyectos reales."
+      },
+      {
+        "heading": "Lo que todavía no sé",
+        "body": "No lo tengo resuelto. Todavía estoy aprendiendo patrones avanzados, diseño de sistemas bajo carga, cómo tomar decisiones de arquitectura con contexto real.\n\nEso no me molesta mostrarlo. Me parece más útil para alguien que lee esto saber que el camino es largo, que pretender que ya llegué."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Pasé de coleccionar frameworks a elegir en qué tipo de problemas profundizar. El cambio no fue aprender menos cosas, sino aprender con dirección. Hoy esa dirección es sistemas distribuidos y backend de alta complejidad."
+      }
+    ]
+  },
+  {
+    "id": "pensar-en-sistemas",
+    "title": "El código puede estar bien y el sistema igual falla",
+    "date": "2026-03-10",
+    "tags": ["architecture", "backend", "thinking"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "Tardé en entender que escribir buen código y diseñar buenos sistemas son habilidades distintas. Esta es la diferencia y por qué importa.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "El endpoint que funcionaba perfecto",
+        "body": "Tenía un endpoint bien escrito. Validaciones, manejo de errores, tests pasando. Todo prolijo.\n\nEn staging tardaba 15 segundos bajo carga concurrente. Nadie lo había pensado porque nadie preguntó '¿qué pasa con 1000 requests simultáneos?'. El código estaba bien. El sistema no."
+      },
+      {
+        "heading": "La diferencia",
+        "body": "Escribir código es resolver un problema puntual y hacer que funcione.\n\nPensar en sistemas es entender cómo interactúan las partes, anticipar fallos, diseñar para escala. No son lo mismo, y por mucho tiempo asumí que si el primero estaba bien, el segundo seguía automáticamente."
+      },
+      {
+        "heading": "El cambio de mentalidad",
+        "body": "Ahora antes de implementar me hago tres preguntas: ¿qué pasa si esto falla? ¿cómo escala? ¿qué impacto tiene sobre el resto del sistema?\n\nNo siempre tengo las respuestas. Pero haberlas formulado ya cambia cómo escribo el código."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "El código puede estar correcto y el sistema igual fallar. Escribir buen código y diseñar buenos sistemas son habilidades distintas. La diferencia está en si pensás solo en el problema puntual o en cómo ese código vive dentro de algo más grande."
+      }
+    ]
+  },
+  {
+    "id": "por-que-journal-dev",
+    "title": "Por qué empecé a escribir en público (y qué quiero evitar)",
+    "date": "2026-03-01",
+    "tags": ["career", "writing"],
+    "type": "career",
+    "level": "intro",
+    "summary": "Tenía proyectos pero faltaba algo: mostrar el proceso real, incluyendo los errores. Este journal es eso.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Faltaba algo",
+        "body": "Tenía proyectos. Tenía código en GitHub. Tenía experiencia trabajando en producción. Pero faltaba algo: mostrar el proceso real.\n\nNo el resultado final. No el código pulido. El proceso — incluyendo los errores, las dudas, los cambios de dirección."
+      },
+      {
+        "heading": "Qué es este journal (y qué no es)",
+        "body": "No es un portfolio. No está pensado para convencer a nadie de que soy bueno.\n\nEs un registro de cómo pienso, cómo aprendo, cómo evoluciono. Un lugar para pensar en voz alta y para que alguien que viene después encuentre algo útil en lo que yo ya tropecé."
+      },
+      {
+        "heading": "Qué quiero evitar",
+        "body": "Mostrar solo lo que salió bien. Ocultar los errores. Escribir posts donde todo tiene sentido desde el principio.\n\nEso no es aprender en público. Eso es marketing disfrazado de journal."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Empecé journal-dev para mostrar el proceso, no los resultados. No es un portfolio ni un blog de tutoriales. Es un lugar donde escribo lo que aprendo, lo que me cuesta, y lo que todavía no tengo resuelto. Si algo de eso le sirve a alguien más, mejor."
+      }
+    ]
+  }
+]

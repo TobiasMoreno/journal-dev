@@ -1,12 +1,12 @@
 <header class="pl-header">
-  <h1 class="pl-header__title">Posts</h1>
-  <p class="pl-header__sub">Aprendizajes, decisiones y reflexiones técnicas.</p>
+  <h1 class="pl-header__title">{{ t().postList.title }}</h1>
+  <p class="pl-header__sub">{{ t().postList.sub }}</p>
 </header>
 
 @if (isLoading()) {
-  <p class="pl-status" role="status">Cargando posts…</p>
+  <p class="pl-status" role="status">{{ t().postList.loading }}</p>
 } @else if (error()) {
-  <p class="pl-status pl-status--error" role="alert">No pude cargar los posts.</p>
+  <p class="pl-status pl-status--error" role="alert">{{ t().postList.error }}</p>
 } @else {
   <ul class="post-list" role="list">
     @for (post of posts(); track post.id) {
