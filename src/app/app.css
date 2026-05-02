@@ -13,10 +13,8 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-@media (prefers-color-scheme: dark) {
-  .app-header {
-    border-bottom-color: var(--color-border-dark);
-  }
+[data-theme="dark"] .app-header {
+  border-bottom-color: var(--color-border-dark);
 }
 
 .app-nav {
@@ -56,14 +54,13 @@
   color: var(--color-fg);
 }
 
-@media (prefers-color-scheme: dark) {
-  .app-nav__link:hover,
-  .app-nav__link--active {
-    color: var(--color-fg-dark);
-  }
+:host-context([data-theme="dark"]) .app-nav__link:hover,
+.app-nav__link--active {
+  color: var(--color-fg-dark);
 }
 
-/* ── Lang toggle ─────────────────────────────────────── */
+/* ── Theme & Lang toggles ─────────────────────────────────── */
+.theme-toggle,
 .lang-toggle {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -77,20 +74,25 @@
   letter-spacing: 0.03em;
 }
 
+.theme-toggle {
+  margin-right: 0.5rem;
+}
+
+.theme-toggle:hover,
 .lang-toggle:hover {
   color: var(--color-fg);
   border-color: var(--color-fg);
 }
 
-@media (prefers-color-scheme: dark) {
-  .lang-toggle {
-    border-color: var(--color-border-dark);
-  }
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .lang-toggle {
+  border-color: var(--color-border-dark);
+}
 
-  .lang-toggle:hover {
-    color: var(--color-fg-dark);
-    border-color: var(--color-fg-dark);
-  }
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .lang-toggle:hover {
+  color: var(--color-fg-dark);
+  border-color: var(--color-fg-dark);
 }
 
 /* ── Main ────────────────────────────────────────────── */
@@ -108,10 +110,8 @@
   border-top: 1px solid var(--color-border);
 }
 
-@media (prefers-color-scheme: dark) {
-  .app-footer {
-    border-top-color: var(--color-border-dark);
-  }
+[data-theme="dark"] .app-footer {
+  border-top-color: var(--color-border-dark);
 }
 
 .app-footer__text {
@@ -134,8 +134,6 @@
   color: var(--color-fg);
 }
 
-@media (prefers-color-scheme: dark) {
-  .app-footer__link:hover {
-    color: var(--color-fg-dark);
-  }
+[data-theme="dark"] .app-footer__link:hover {
+  color: var(--color-fg-dark);
 }

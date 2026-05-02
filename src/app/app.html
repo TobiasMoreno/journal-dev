@@ -8,6 +8,13 @@
         <li><a routerLink="/about" routerLinkActive="app-nav__link--active" class="app-nav__link">{{ t().nav.about }}</a></li>
       </ul>
       <button
+        class="theme-toggle"
+        (click)="toggleTheme()"
+        [attr.aria-label]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
+      >
+        {{ isDarkMode() ? '☀️' : '🌙' }}
+      </button>
+      <button
         class="lang-toggle"
         (click)="toggleLang()"
         [attr.aria-label]="currentLang() === 'es' ? 'Switch to English' : 'Cambiar a Español'"

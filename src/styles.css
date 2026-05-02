@@ -35,11 +35,9 @@
     line-height: 1.65;
   }
 
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: var(--color-surface-dark);
-      color: var(--color-fg-dark);
-    }
+  [data-theme="dark"] body {
+    background-color: var(--color-surface-dark);
+    color: var(--color-fg-dark);
   }
 
   a {
