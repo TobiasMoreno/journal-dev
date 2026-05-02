@@ -95,13 +95,19 @@ export const es: Translations = {
   },
   now: {
     title: 'Hoy',
-    updated: 'Actualizado: Abril 2026',
+    updated: 'Actualizado: Mayo 2026',
     learning: {
       heading: 'Aprendiendo',
       items: [
+        'Agentes de IA: arquitectura, patrones e implementación',
+        'Documentos de Diseño de Software (SDD)',
+        'Tokens LLM: tokenización, precios y optimización',
+        'Mejores modelos de lenguaje: criterios de selección y casos de uso',
+        'Optimización de skills para agentes de IA',
         'Concurrencia en Java con CompletableFuture y Virtual Threads',
         'Patrones de resiliencia: circuit breaker, bulkhead, retry',
         'Arquitectura de sistemas distribuidos',
+        'Habilidades de oratoria',
       ],
     },
     building: {

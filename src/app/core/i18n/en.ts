@@ -96,13 +96,19 @@ export const en: Translations = {
   },
   now: {
     title: 'Now',
-    updated: 'Updated: April 2026',
+    updated: 'Updated: May 2026',
     learning: {
       heading: 'Learning',
       items: [
+        'AI Agents: architecture, patterns and implementation',
+        'Software Design Documents (SDD)',
+        'LLM Tokens: tokenization, pricing and optimization',
+        'Best language models: selection criteria and use cases',
+        'Skills optimization for AI agents',
         'Concurrency in Java with CompletableFuture and Virtual Threads',
         'Resilience patterns: circuit breaker, bulkhead, retry',
         'Distributed systems architecture',
+        'Oratory skills',
       ],
     },
     building: {

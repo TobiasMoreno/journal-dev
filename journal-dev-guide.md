@@ -58,33 +58,47 @@ journal-dev/
 
 ## ⚙️ Post Creation Flow
 
-1. Crear archivo .md en /content/posts  
-2. Agregar entrada en posts.json  
-3. Publicar  
+1. Definir el **problema** que dispara el post (no el tema, el problema)
+2. Escribir la **solución** y las opciones descartadas
+3. Extraer el **aprendizaje** transferible
+4. Crear archivo .md en /content/posts siguiendo el template
+5. Agregar entrada en posts.json
+6. Publicar
 
 ---
 
 ## ✍️ Post Template
 
+**Regla base:** todo post sigue el enfoque **Problema → Solución → Aprendizaje**.
+No se publica un post que no tenga las tres partes claras.
+
 ```
-# 🧠 Qué quise aprender
-Contexto
+# 🚧 Problema
+Contexto real, qué estaba mal o qué no se entendía.
+Síntomas concretos (idealmente con un dato: latencia, error, tiempo, etc.).
+Por qué importaba resolverlo.
 
-# ⚙️ Qué hice
-Código / enfoque
+# ⚙️ Solución
+Qué hice / qué decidí.
+Opciones que evalué y por qué descarté las otras.
+Código o enfoque mínimo necesario para entenderlo.
 
-# 🚧 Problemas que tuve
-Errores reales
+# 💡 Aprendizaje
+Qué entendí que antes no.
+Qué cambia en cómo encaro problemas similares.
+Qué sigo sin tener resuelto (honestidad > cierre prolijo).
 
-# 💡 Qué entendí
-Insight clave
-
-# 🔄 Qué haría distinto
-Reflexión
-
-# 🚀 Próximos pasos
-Continuación
+# 📌 TL;DR
+Problema, solución y aprendizaje en 3-4 líneas.
 ```
+
+### Checklist antes de publicar
+
+- [ ] ¿Se identifica claramente el **problema** (no solo el tema)?
+- [ ] ¿La **solución** muestra trade-offs, no solo lo que funcionó?
+- [ ] ¿El **aprendizaje** es transferible a otros contextos?
+- [ ] ¿Hay al menos un dato, número o caso concreto?
+- [ ] ¿Termina con TL;DR?
 
 ---
 
@@ -148,4 +162,8 @@ Continuación
 
 Este proyecto no es un portfolio.  
 Es un sistema vivo que documenta tu evolución como ingeniero.
+
+Cada post es una unidad de aprendizaje con la misma forma:
+**Problema → Solución → Aprendizaje.**
+Esa estructura es lo que separa un journal de un blog de tutoriales.
 
