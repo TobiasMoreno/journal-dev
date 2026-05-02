@@ -42,7 +42,7 @@ export const es: Translations = {
     viewLinkedIn: 'Ver versión en LinkedIn →',
   },
   about: {
-    title: 'About',
+    title: 'Sobre mí',
     sub: 'Quién soy, cómo trabajo, qué busco. Sin clichés.',
     identity: {
       heading: 'Identidad',
