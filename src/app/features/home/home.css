@@ -135,7 +135,7 @@
   display: inline-block;
   margin-top: 1.25rem;
   font-size: 0.875rem;
-  color: var(--color-accent);
+  color: var(--color-fg-dark);
   transition: opacity 0.15s;
 }
 
