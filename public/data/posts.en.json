@@ -1,5 +1,35 @@
 [
   {
+    "id": "coding-agents-product-engineer",
+    "title": "Coding agents: from Full Stack Developer to Product Engineer",
+    "date": "2026-05-06",
+    "tags": ["ai", "agents", "context engineering", "career", "thinking"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "I went to the \"Coding agents and the new role of the developer\" seminar at UTN Córdoba, given by people from Mercado Libre. I was already implementing almost everything I saw — the value was in consolidating fundamentals, contrasting my way of working with more experienced teams, and walking away with an open question worth holding on to.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Problem",
+        "body": "Today, May 6th, I went to the \"Coding agents and the new role of the developer\" seminar at UTN Córdoba. It was given by Julián De Angelis (@juliandeangeIis — https://x.com/juliandeangeIis) and Agustín Gallici (@Adiazgallici — https://x.com/Adiazgallici), genai tech lead and sr ai software engineer at Mercado Libre.\n\nI already knew most of what was covered. I use Claude Code, Cursor, and ChatGPT every day. I've been working with SDD for months using opsx. I've tried skills. I handle context carefully.\n\nSo why did I go? For two reasons. One, I'm interested in the future of development and how it will affect other areas, not just my profession. Two, I wanted to contrast my way of working with that of teams who have been at this longer. When you learn on your own, you can be doing everything reasonably and not know it — or be doing something crooked and not know that either.",
+        "image": "/img/coding-agents-2.jpeg"
+      },
+      {
+        "heading": "Solution",
+        "body": "The seminar reinforced five fronts I already had open:\n\n1. Context engineering. I was working on it by intuition. I left with the explicit conviction that it's a discipline, and that an agent's output depends as much on the context as on the model. Everything surrounding the prompt — instructions, loaded files, history, active skills, previous outputs — carries weight.\n\n2. SDD (Spec-Driven Development). They confirmed what I'd been noticing with opsx: it structures the change, optimizes tokens, and gives more control over what gets implemented. Knowing that a large team arrives at the same conclusion through their own path validates the direction.\n\n3. Skills. They presented it briefly. Still, it helped confirm the mental model I already had about what they are and when they activate.\n\n4. RAG. It wasn't the main act. They put it in its place: one more piece agents use under the hood, not the answer to everything.\n\n5. Context window. They touched on cost, degradation with long context, cache, and compaction. Nothing new, but all flagged as \"must keep in mind\". Reinforced the priority I was already giving it.\n\nThe main thesis — and the phrase that stuck with me — was this: there's no longer such a thing as a backend or frontend developer. There's the product engineer, in charge of orchestrating agents. I hadn't heard it for the first time, but hearing it like that, structured and argued, gave it weight."
+      },
+      {
+        "heading": "Learning",
+        "body": "The value of the seminar wasn't in discovering new things. It was in consolidating fundamentals and locating myself. Knowing that what I've been doing is aligned with what teams like Mercado Libre's are thinking changes my confidence level when proposing things in my own team.\n\nThe strongest idea I'm taking away isn't a technique: it's that everything that makes up the context is part of the work. The prompt is just the tip. The loaded files, the order in which the agent receives them, the skill that activates — all of that defines the result as much as the chosen model.\n\nWhat stuck with me — and seems like the most interesting open question — is where to store specs when they cross multiple repositories. There's no single answer. Each team solves it differently:\n\n- Inside each affected repo: easy discovery for whoever touches that repo, but the spec gets duplicated or out of sync.\n- In a generic spec living outside the repos: not duplicated, but it loses proximity to the code.\n- In a repo dedicated to specs: clear ownership, but adds one more repo to the loop.\n\nEach option has trade-offs in discovery, synchronization, versioning, and ownership. It's one of those decisions that looks minor until you have to take it seriously.\n\nIf the product engineer thesis holds, this question stops being about organization: it becomes architecture."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "I went to the \"Coding agents\" seminar by Mercado Libre at UTN Córdoba. I already knew and applied most of it — context engineering, SDD, skills, RAG, context window. The value was in reinforcing fundamentals and validating my direction against how more experienced teams think about it. The phrase that stuck: I'm no longer a backend developer, I'm a product engineer orchestrating agents. The open question: where to store the specs that cross multiple repos."
+      }
+    ]
+  },
+  {
     "id": "primer-año-como-developer",
     "title": "One year as a developer: what changed in how I think",
     "date": "2026-04-29",
