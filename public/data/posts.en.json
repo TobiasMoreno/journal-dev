@@ -70,7 +70,7 @@
     "sections": [
       {
         "heading": "Problem",
-        "body": "When someone sent me the martinfowler.com article on Structured-Prompt-Driven Development, I didn't expect to find my own workflow described in every section.\n\nI use SDD with opsx — a workflow where changes are designed before being implemented, with explicit context, constraints, and tasks. But the part about prompts as governed artifacts — that I didn't have. I was structuring the what and the how, but the prompt that ultimately reached the model stayed implicit.\n\nThe real gap: implicit prompts, no traceability between intent and implementation."
+        "body": "When someone sent me the martinfowler.com article on Structured-Prompt-Driven Development (https://martinfowler.com/articles/structured-prompt-driven/), I didn't expect to find my own workflow described in every section.\n\nI use SDD with opsx — a workflow where changes are designed before being implemented, with explicit context, constraints, and tasks. But the part about prompts as governed artifacts — that I didn't have. I was structuring the what and the how, but the prompt that ultimately reached the model stayed implicit.\n\nThe real gap: implicit prompts, no traceability between intent and implementation."
       },
       {
         "heading": "Solution",

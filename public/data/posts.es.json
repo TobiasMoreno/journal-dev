@@ -1,7 +1,7 @@
 [
   {
     "id": "coding-agents-product-engineer",
-    "title": "Coding agents: el seminario que fortaleció lo que ya hacía",
+    "title": "Coding agents: de Full Stack Developer a Product Engineer",
     "date": "2026-05-06",
     "tags": ["ia", "agentes", "context engineering", "carrera", "reflexión"],
     "type": "thinking",
@@ -100,7 +100,7 @@
     "sections": [
       {
         "heading": "Problema",
-        "body": "Cuando me pasaron el artículo de martinfowler.com sobre Structured-Prompt-Driven Development, no esperaba encontrar mi propio flujo de trabajo descrito en cada sección.\n\nYo uso SDD con opsx — un workflow donde los cambios se diseñan antes de implementarse, con contexto, restricciones y tareas explícitas. Pero la parte de los prompts como artefactos gobernados, eso no lo tenía. Lo que hacía era estructurar el qué y el cómo, pero el prompt que termina llegando al modelo quedaba implícito.\n\nEl gap real: prompts implícitos, sin trazabilidad entre intención e implementación."
+        "body": "Cuando me pasaron el artículo de martinfowler.com sobre Structured-Prompt-Driven Development (https://martinfowler.com/articles/structured-prompt-driven/), no esperaba encontrar mi propio flujo de trabajo descrito en cada sección.\n\nYo uso SDD con opsx — un workflow donde los cambios se diseñan antes de implementarse, con contexto, restricciones y tareas explícitas. Pero la parte de los prompts como artefactos gobernados, eso no lo tenía. Lo que hacía era estructurar el qué y el cómo, pero el prompt que termina llegando al modelo quedaba implícito.\n\nEl gap real: prompts implícitos, sin trazabilidad entre intención e implementación."
       },
       {
         "heading": "Solución",
