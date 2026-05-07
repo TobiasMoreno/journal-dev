@@ -1,3 +1,8 @@
 [build]
   command = "npm run build"
   publish = "dist/journal-dev/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

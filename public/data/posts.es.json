@@ -1,5 +1,35 @@
 [
   {
+    "id": "coding-agents-product-engineer",
+    "title": "Coding agents: el seminario que fortaleció lo que ya hacía",
+    "date": "2026-05-06",
+    "tags": ["ia", "agentes", "context engineering", "carrera", "reflexión"],
+    "type": "thinking",
+    "level": "medium",
+    "summary": "Fui al seminario \"Coding agents y el nuevo rol del developer\" en la UTN Córdoba, dictado por gente de Mercado Libre. Ya implementaba prácticamente todo lo que vi — el valor estuvo en consolidar fundamentos, contrastar mi forma de trabajar con la de equipos más experimentados y llevarme una pregunta abierta que vale la pena.",
+    "featured": false,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Problema",
+        "body": "Hoy 6 de mayo fui al seminario \"Coding agents y el nuevo rol del developer\" en la UTN Córdoba. Lo dictaron Julián De Angelis (@juliandeangeIis — https://x.com/juliandeangeIis) y Agustín Gallici (@Adiazgallici — https://x.com/Adiazgallici), tech lead genai y sr ai software engineer de Mercado Libre.\n\nSi bien ya conocía la mayoría de lo que se trató. Uso Claude Code, Cursor y ChatGPT todos los días. Trabajo con SDD desde hace meses usando opsx. Probé skills. Manejo el contexto con cuidado.\n\nEntonces, ¿para qué fui? Por dos razones. Una, me interesa el futuro del desarrollo y cómo va a afectar a otras áreas, no solo a mi profesión. Dos, quería contrastar mi forma de trabajar con la de equipos que llevan más tiempo en esto. Cuando aprendés en soledad, podés estar haciendo todo razonable y no saberlo — o estar haciendo algo torcido y tampoco saberlo.",
+        "image": "/img/coding-agents-2.jpeg"
+      },
+      {
+        "heading": "Solución",
+        "body": "El seminario fortaleció cinco frentes que ya tenía abiertos:\n\n1. Context engineering. Lo trabajaba por intuición. Salí con la convicción explícita de que es una disciplina y de que el resultado de un agente depende tanto del contexto como del modelo. Todo lo que rodea al prompt — instrucciones, archivos cargados, historial, skills activas, salidas previas — pesa.\n\n2. SDD (Spec-Driven Development). Confirmaron lo que venía notando con opsx: ordena el cambio, optimiza tokens y da más control sobre lo implementado. Saber que un equipo grande llega a la misma conclusión por su propio camino valida el rumbo.\n\n3. Skills. Lo presentaron breve. Igual sirvió para confirmar el modelo mental que ya tenía sobre qué son y cuándo se activan.\n\n4. RAG. No fue protagonista. Lo dejaron en su lugar: una pieza más que los agentes usan por debajo, no la respuesta a todo.\n\n5. Ventana de contexto. Tocaron costo, degradación con contexto largo, cache y compactación. Nada nuevo, pero todo marcado como \"a tener en cuenta sí o sí\". Reforzó la prioridad que ya le venía dando.\n\nLa tesis principal — y la frase que me quedó dando vueltas — fue esta: ya no existe el backend o frontend developer. Existe el product engineer, encargado de orquestar agentes. No la escuché por primera vez, pero escucharla así, ordenada y argumentada, le dio peso."
+      },
+      {
+        "heading": "Aprendizaje",
+        "body": "El valor del seminario no estuvo en descubrir cosas nuevas. Estuvo en consolidar fundamentos y ubicarme. Saber que lo que vengo haciendo está alineado con lo que están pensando equipos como el de Mercado Libre cambia mi nivel de confianza al proponer cosas en mi propio equipo.\n\nLa idea más fuerte que me llevo no es una técnica: es que todo lo que conforma el contexto es parte del trabajo. El prompt es la punta. Los archivos cargados, el orden en que el agente los recibe, la skill que se activa — todo eso define el resultado tanto como el modelo elegido.\n\nLo que me dejó dando vueltas — y me parece la pregunta abierta más interesante — es dónde guardar las specs cuando atraviesan múltiples repositorios. No hay una respuesta única. Cada equipo lo resuelve distinto:\n\n- Dentro de cada repo afectado: descubrimiento fácil para quien toca ese repo, pero la spec se duplica o se desincroniza.\n- En un spec genérico por fuera: no se duplica, pero pierde proximidad con el código.\n- En un repo dedicado a specs: ownership claro, pero suma un repo más al loop.\n\nCada opción tiene trade-offs en descubrimiento, sincronización, versionado y ownership. Es una de esas decisiones que parece menor hasta que tenés que tomarla en serio.\n\nSi la tesis del product engineer es cierta, esta pregunta deja de ser de organización: pasa a ser de arquitectura."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Fui al seminario \"Coding agents\" de Mercado Libre en la UTN Córdoba. Ya conocía y aplicaba la mayoría — context engineering, SDD, skills, RAG, ventana de contexto. El valor estuvo en fortalecer fundamentos y validar el rumbo contra cómo lo piensan equipos con más recorrido. La frase que me quedó: ya no soy backend developer, soy product engineer que orquesta agentes. La pregunta que me dejó abierta: dónde guardar las specs que atraviesan múltiples repos."
+      }
+    ]
+  },
+  {
     "id": "primer-año-como-developer",
     "title": "Un año trabajando como developer: lo que cambió en mi forma de pensar",
     "date": "2026-04-29",
