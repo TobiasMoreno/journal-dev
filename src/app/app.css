@@ -119,6 +119,13 @@
   color: var(--color-muted);
 }
 
+.app-footer__cta {
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
 .app-footer__links {
   display: flex;
   gap: 1rem;

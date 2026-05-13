@@ -8,10 +8,11 @@ export const en: Translations = {
   },
   footer: {
     role: 'Backend Engineer',
+    cta: "Did anything resonate? Let's talk.",
   },
   home: {
     hero: {
-      titleLine1: 'Backend engineer.',
+      titleLine1: 'Backend Engineer.',
       titleLine2: 'Documenting the evolution.',
       sub: 'Technical learnings, professional decisions, and real mistakes. All in public, all unfiltered.',
     },
@@ -46,9 +47,9 @@ export const en: Translations = {
     sub: 'Who I am, how I work, what I look for. No clichés.',
     identity: {
       heading: 'Identity',
-      p1before: "I'm Tobias Moreno, Backend Engineer at",
+      p1before: "I'm Tobias Moreno, Backend Engineer at Techforb, working on",
       p1after:
-        ", a fintech focused on digital credit. I live in Córdoba, Argentina, and I've been building software for",
+        " — a fintech focused on digital credit. I live in Córdoba, Argentina, and I've been building software for 2 years, the last one in backend fintech.",
       p2: 'I currently work with Java, Spring Boot, and NestJS, on systems that move real money for real people. That orders priorities fast: what breaks matters more than what looks good in a demo.',
     },
     howIWork: {

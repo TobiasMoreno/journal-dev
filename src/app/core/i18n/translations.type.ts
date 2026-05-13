@@ -6,6 +6,7 @@ export interface Translations {
   };
   footer: {
     role: string;
+    cta: string;
   };
   home: {
     hero: {

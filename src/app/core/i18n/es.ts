@@ -8,10 +8,11 @@ export const es: Translations = {
   },
   footer: {
     role: 'Backend Engineer',
+    cta: '¿Te resonó algo? Hablemos.',
   },
   home: {
     hero: {
-      titleLine1: 'Backend engineer.',
+      titleLine1: 'Backend Engineer.',
       titleLine2: 'Documentando la evolución.',
       sub: 'Aprendizajes técnicos, decisiones profesionales y errores reales. Todo en público, todo sin filtro.',
     },
@@ -46,8 +47,8 @@ export const es: Translations = {
     sub: 'Quién soy, cómo trabajo, qué busco. Sin clichés.',
     identity: {
       heading: 'Identidad',
-      p1before: 'Soy Tobias Moreno, Backend Engineer en',
-      p1after: ', una fintech con foco en crédito digital. Vivo en Córdoba, Argentina, y vengo desarrollando software hace',
+      p1before: 'Soy Tobias Moreno, Backend Engineer en Techforb, trabajando en',
+      p1after: ' — una fintech con foco en crédito digital. Vivo en Córdoba, Argentina, y vengo desarrollando software hace 2 años, el último en backend fintech.',
       p2: 'Hoy trabajo con Java, Spring Boot y NestJS, en sistemas que mueven dinero real para gente real. Eso ordena prioridades rápido: lo que rompe importa más que lo que se ve lindo en un demo.',
     },
     howIWork: {

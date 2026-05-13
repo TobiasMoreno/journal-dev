@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, input } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { LanguageService } from '../../core/services/language.service';
 import { PostService } from '../../core/services/post.service';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -15,10 +16,21 @@ import { PostService } from '../../core/services/post.service';
 export class PostDetailComponent {
   private readonly postService = inject(PostService);
   private readonly langService = inject(LanguageService);
+  private readonly seo = inject(SeoService);
 
   readonly t = this.langService.translations;
   readonly id = input.required<string>();
   readonly isLoading = this.postService.isLoading;
   readonly error = this.postService.error;
   readonly post = computed(() => this.postService.posts().find((p) => p.id === this.id()));
+
+  constructor() {
+    effect((onCleanup) => {
+      const current = this.post();
+      if (current) {
+        this.seo.setForPost(current);
+      }
+      onCleanup(() => this.seo.setDefaults());
+    });
+  }
 }
