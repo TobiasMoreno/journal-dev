@@ -1,9 +1,52 @@
 [
   {
+    "id": "tobias-agent-toolkit-marketplace",
+    "title": "I turned my agent workflows into a reusable marketplace",
+    "date": "2026-05-14",
+    "tags": [
+      "ai",
+      "agents",
+      "tooling",
+      "openspec",
+      "codex",
+      "claude-code"
+    ],
+    "type": "project",
+    "level": "medium",
+    "summary": "I built tobias-agent-toolkit, a personal marketplace to distribute workflows, skills, agents, and rules across Claude Code and Codex from a single source of truth. The goal was not another prompt collection, but turning my agent workflow into versioned, installable, maintainable tooling.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Problem",
+        "body": "I had been using agents to develop with more structure: explore before touching code, turn changes into specs, apply task by task, review against the contract, and archive what was learned. The workflow worked, but it was too tied to each tool and each repo.\n\nThe problem was not writing better prompts once. The problem was reusing judgment: same rules, same steps, same names, and the same way of thinking, even when the CLI or project changes. When that knowledge is scattered across chats, loose markdown files, and personal memory, it becomes hard to maintain.",
+        "image": "/img/tobias-agent-toolkit.png"
+      },
+      {
+        "heading": "Solution",
+        "body": "I built tobias-agent-toolkit as a multi-agent marketplace. The core idea is to keep a single source of truth in core/ and generate thin adapters for Claude Code and Codex.\n\nToday the repo publishes four plugins: tat-core for infrastructure and updates, tat-opsx-openspec for the OPSX flow on top of OpenSpec, tat-review-tools for review and governance, and tat-explain-tools for understanding existing systems.\n\nThe important detail is that I do not edit adapters manually. Workflows, skills, commands, agents, rules, and templates live in core/. Then npm run build generates what each environment needs. Claude also receives commands, hooks, and agents; Codex receives skills and rules. That difference is modeled in the build, not copied by hand."
+      },
+      {
+        "heading": "Learning",
+        "body": "The strongest learning was that a good agent workflow needs distribution, not just documentation. If every project depends on me remembering to copy the latest prompt, the system does not scale. If the workflow is versioned, installable, and checked for drift, it starts behaving more like real tooling.\n\nIt also helped me separate two layers I had been mixing: the work intent and the tool adapter. OPSX should not be \"a Claude prompt\" or \"a Codex prompt\". It should be its own workflow, with adapters that respect the capabilities and limits of each runtime.\n\nThere is still work left: automatic Codex installation, CI, MCP, and a more mature distribution strategy. But the MVP already validates the main idea: my development workflows can live as an internal product, not as text lost in conversations."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "I built a personal marketplace called tobias-agent-toolkit to reuse agent workflows across Claude Code and Codex. The source of truth lives in core/ and generates adapters for each CLI. The main shift was treating my agent workflows as versioned, installable tooling, not loose prompts."
+      }
+    ]
+  },
+  {
     "id": "coding-agents-product-engineer",
     "title": "Coding agents: from Full Stack Developer to Product Engineer",
     "date": "2026-05-06",
-    "tags": ["ai", "agents", "context engineering", "career", "thinking"],
+    "tags": [
+      "ai",
+      "agents",
+      "context engineering",
+      "career",
+      "thinking"
+    ],
     "type": "thinking",
     "level": "medium",
     "summary": "I went to the \"Coding agents and the new role of the developer\" seminar at UTN Córdoba, given by people from Mercado Libre. I was already implementing almost everything I saw — the value was in consolidating fundamentals, contrasting my way of working with more experienced teams, and walking away with an open question worth holding on to.",
@@ -33,7 +76,12 @@
     "id": "primer-año-como-developer",
     "title": "One year as a developer: what changed in how I think",
     "date": "2026-04-29",
-    "tags": ["career", "growth", "backend", "learning"],
+    "tags": [
+      "career",
+      "growth",
+      "backend",
+      "learning"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "I started in March 2025. I had doubts, but trusted I could adapt. A year later the most important change wasn't technical — it was mental: I stopped thinking from the ticket and started thinking from the user.",
@@ -62,7 +110,11 @@
     "id": "comunicar-la-solucion",
     "title": "I had the answer. The problem was explaining it.",
     "date": "2026-04-29",
-    "tags": ["career", "communication", "growth"],
+    "tags": [
+      "career",
+      "communication",
+      "growth"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "I was the only one with the solution. But I couldn't get it across. That made me see something I'd been ignoring: having the answer isn't enough if you can't explain it. I started an oratory course, and what I'm learning goes well beyond speaking clearly.",
@@ -91,7 +143,12 @@
     "id": "spdd-fowler-ya-lo-hacia",
     "title": "SPDD on martinfowler.com: what my opsx workflow was missing",
     "date": "2026-04-18",
-    "tags": ["ai", "prompting", "workflow", "thinking"],
+    "tags": [
+      "ai",
+      "prompting",
+      "workflow",
+      "thinking"
+    ],
     "type": "thinking",
     "level": "medium",
     "summary": "I use SDD with opsx to structure changes before implementing them. But Fowler's article on SPDD showed me the gap: prompts as governed artifacts. This is what it proposes, what I was missing, and the idea that most changed my perspective.",
@@ -120,7 +177,12 @@
     "id": "feedback-que-costo-escuchar",
     "title": "They told me I lacked depth. They were right.",
     "date": "2026-03-20",
-    "tags": ["java", "concurrency", "backend", "career"],
+    "tags": [
+      "java",
+      "concurrency",
+      "backend",
+      "career"
+    ],
     "type": "learning",
     "level": "medium",
     "summary": "I wanted to know where I stood. I asked a developer friend for an honest code review, and the feedback was precise: solid code, solid tests, but no depth in concurrency and distributed systems. That's how I started truly understanding how concurrent execution works in Java.",
@@ -149,7 +211,11 @@
     "id": "construyendo-camino-backend",
     "title": "When I stopped asking myself which technology to learn next",
     "date": "2026-03-20",
-    "tags": ["career", "backend", "distributed-systems"],
+    "tags": [
+      "career",
+      "backend",
+      "distributed-systems"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "I spent years accumulating frameworks. The real shift was stopping thinking about technologies and starting to think about what kind of problems I want to solve.",
@@ -178,7 +244,11 @@
     "id": "pensar-en-sistemas",
     "title": "The code can be fine and the system can still fail",
     "date": "2026-03-10",
-    "tags": ["architecture", "backend", "thinking"],
+    "tags": [
+      "architecture",
+      "backend",
+      "thinking"
+    ],
     "type": "thinking",
     "level": "medium",
     "summary": "It took me a while to understand that writing good code and designing good systems are different skills. Here's the difference and why it matters.",
@@ -207,7 +277,10 @@
     "id": "por-que-journal-dev",
     "title": "Why I started writing in public (and what I want to avoid)",
     "date": "2026-03-01",
-    "tags": ["career", "writing"],
+    "tags": [
+      "career",
+      "writing"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "I had projects but something was missing: showing the real process, including the mistakes. This journal is that.",

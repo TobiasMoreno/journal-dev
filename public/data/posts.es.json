@@ -1,9 +1,52 @@
 [
   {
+    "id": "tobias-agent-toolkit-marketplace",
+    "title": "Convertí mis workflows de agentes en un marketplace reutilizable",
+    "date": "2026-05-14",
+    "tags": [
+      "ia",
+      "agentes",
+      "tooling",
+      "openspec",
+      "codex",
+      "claude-code"
+    ],
+    "type": "project",
+    "level": "medium",
+    "summary": "Armé tobias-agent-toolkit, un marketplace personal para distribuir workflows, skills, agents y reglas entre Claude Code y Codex desde una sola fuente de verdad. El objetivo no fue hacer otro set de prompts, sino convertir mi forma de trabajar con agentes en tooling versionado, instalable y mantenible.",
+    "featured": true,
+    "linkedin": "",
+    "sections": [
+      {
+        "heading": "Problema",
+        "body": "Venía usando agentes para desarrollar con más estructura: explorar antes de tocar código, bajar cambios a specs, aplicar por tareas, revisar contra el contrato y archivar lo aprendido. El flujo funcionaba, pero estaba demasiado pegado a cada herramienta y a cada repo.\n\nEl problema no era escribir mejores prompts una vez. El problema era poder reutilizar el criterio: mismas reglas, mismos pasos, mismos nombres y misma forma de pensar, aunque cambie la CLI o el proyecto. Cuando ese conocimiento queda repartido entre chats, markdowns sueltos y memoria personal, se vuelve difícil de mantener.",
+        "image": "/img/tobias-agent-toolkit.png"
+      },
+      {
+        "heading": "Solución",
+        "body": "Construí tobias-agent-toolkit como un marketplace multi-agente. La idea central es tener una sola fuente de verdad en core/ y generar adapters finos para Claude Code y Codex.\n\nHoy el repo publica cuatro plugins: tat-core para infraestructura y updates, tat-opsx-openspec para el flujo OPSX sobre OpenSpec, tat-review-tools para revisión y gobernanza, y tat-explain-tools para entender sistemas existentes.\n\nEl detalle importante es que no edito los adapters a mano. Los workflows, skills, commands, agents, rules y templates viven en core/. Después npm run build genera lo que necesita cada entorno. Claude recibe además commands, hooks y agents; Codex recibe skills y rules. Esa diferencia queda modelada en el build, no en duplicación manual."
+      },
+      {
+        "heading": "Aprendizaje",
+        "body": "El aprendizaje más fuerte fue que un buen workflow con agentes necesita distribución, no solo documentación. Si cada proyecto depende de que yo recuerde copiar el último prompt, el sistema no escala. Si el flujo está versionado, instalable y validado contra drift, empieza a parecerse más a una herramienta real.\n\nTambién me ayudó a separar dos capas que antes mezclaba: la intención de trabajo y el adapter de la herramienta. OPSX no debería ser \"un prompt para Claude\" ni \"un prompt para Codex\". Debería ser un flujo propio, con adapters que respeten las capacidades y límites de cada runtime.\n\nTodavía queda por resolver instalación automática para Codex, CI, MCP y una estrategia más madura de distribución. Pero el MVP ya valida la idea principal: mis workflows de desarrollo pueden vivir como producto interno, no como texto perdido en conversaciones."
+      },
+      {
+        "heading": "TL;DR",
+        "body": "Armé un marketplace personal llamado tobias-agent-toolkit para reutilizar workflows de agentes entre Claude Code y Codex. La fuente de verdad vive en core/ y genera adapters para cada CLI. Lo más importante no fue el código, sino el cambio de mentalidad: tratar mis flujos con agentes como tooling versionado e instalable, no como prompts sueltos."
+      }
+    ]
+  },
+  {
     "id": "coding-agents-product-engineer",
     "title": "Coding agents: de Full Stack Developer a Product Engineer",
     "date": "2026-05-06",
-    "tags": ["ia", "agentes", "context engineering", "carrera", "reflexión"],
+    "tags": [
+      "ia",
+      "agentes",
+      "context engineering",
+      "carrera",
+      "reflexión"
+    ],
     "type": "thinking",
     "level": "medium",
     "summary": "Fui al seminario \"Coding agents y el nuevo rol del developer\" en la UTN Córdoba, dictado por gente de Mercado Libre. Ya implementaba prácticamente todo lo que vi — el valor estuvo en consolidar fundamentos, contrastar mi forma de trabajar con la de equipos más experimentados y llevarme una pregunta abierta que vale la pena.",
@@ -33,7 +76,12 @@
     "id": "primer-año-como-developer",
     "title": "Un año trabajando como developer: lo que cambió en mi forma de pensar",
     "date": "2026-04-29",
-    "tags": ["carrera", "crecimiento", "backend", "aprendizaje"],
+    "tags": [
+      "carrera",
+      "crecimiento",
+      "backend",
+      "aprendizaje"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "Arranqué en marzo de 2025. Tenía dudas, pero confiaba en que podía adaptarme. Un año después el cambio más importante no fue técnico — fue mental: dejé de pensar desde el ticket y empecé a pensar desde el usuario.",
@@ -62,7 +110,11 @@
     "id": "comunicar-la-solucion",
     "title": "Tenía la solución. El problema era explicarla.",
     "date": "2026-04-18",
-    "tags": ["carrera", "comunicación", "crecimiento"],
+    "tags": [
+      "carrera",
+      "comunicación",
+      "crecimiento"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "Fui el único con la respuesta y no logré transmitirla. Eso me hizo ver algo que venía ignorando: tener la solución no alcanza si no podés comunicarla. Arranqué un curso de oratoria, y lo que estoy aprendiendo va más allá de hablar bien.",
@@ -91,7 +143,12 @@
     "id": "spdd-fowler-ya-lo-hacia",
     "title": "SPDD en martinfowler.com: lo que mi flujo con opsx no tenía",
     "date": "2026-04-29",
-    "tags": ["ia", "prompting", "workflow", "reflexión"],
+    "tags": [
+      "ia",
+      "prompting",
+      "workflow",
+      "reflexión"
+    ],
     "type": "thinking",
     "level": "medium",
     "summary": "Uso SDD con opsx para estructurar cambios antes de implementarlos. Pero el artículo de Fowler sobre SPDD me mostró el gap: los prompts como artefactos gobernados. Esto es lo que propone, qué me faltaba, y la idea que más me cambió la perspectiva.",
@@ -120,7 +177,12 @@
     "id": "feedback-que-costo-escuchar",
     "title": "Me dijeron que me faltaba profundidad. Tenían razón.",
     "date": "2026-03-20",
-    "tags": ["java", "concurrencia", "backend", "carrera"],
+    "tags": [
+      "java",
+      "concurrencia",
+      "backend",
+      "carrera"
+    ],
     "type": "learning",
     "level": "medium",
     "summary": "Quise saber dónde estaba parado. Le pedí un code review honesto a un amigo desarrollador y el feedback fue preciso: buen código, buenos tests, pero sin profundidad en concurrencia y sistemas distribuidos. Así empecé a entender de verdad cómo funciona la ejecución concurrente en Java.",
@@ -149,7 +211,11 @@
     "id": "construyendo-camino-backend",
     "title": "Cuándo dejé de preguntarme qué tecnología aprender",
     "date": "2026-03-20",
-    "tags": ["carrera", "backend", "sistemas distribuidos"],
+    "tags": [
+      "carrera",
+      "backend",
+      "sistemas distribuidos"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "Pasé años acumulando frameworks. El cambio real fue dejar de pensar en tecnologías y empezar a pensar en qué tipo de problemas quiero resolver.",
@@ -178,7 +244,11 @@
     "id": "pensar-en-sistemas",
     "title": "El código puede estar bien y el sistema igual falla",
     "date": "2026-03-10",
-    "tags": ["arquitectura", "backend", "reflexión"],
+    "tags": [
+      "arquitectura",
+      "backend",
+      "reflexión"
+    ],
     "type": "thinking",
     "level": "medium",
     "summary": "Tardé en entender que escribir buen código y diseñar buenos sistemas son habilidades distintas. Esta es la diferencia y por qué importa.",
@@ -207,7 +277,10 @@
     "id": "por-que-journal-dev",
     "title": "Por qué empecé a escribir en público (y qué quiero evitar)",
     "date": "2026-03-01",
-    "tags": ["carrera", "escritura"],
+    "tags": [
+      "carrera",
+      "escritura"
+    ],
     "type": "career",
     "level": "intro",
     "summary": "Tenía proyectos pero faltaba algo: mostrar el proceso real, incluyendo los errores. Este journal es eso.",

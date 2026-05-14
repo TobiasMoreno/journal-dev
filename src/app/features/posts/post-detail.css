@@ -127,11 +127,141 @@
   }
 }
 
-.pd-section__image {
+.pd-section__image-button {
   display: block;
   width: 100%;
   margin-top: 1.25rem;
+  padding: 0;
+  border: 0;
   border-radius: 6px;
+  background: transparent;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.pd-section__image {
+  display: block;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.pd-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgb(10 10 10 / 0.86);
+  cursor: zoom-out;
+}
+
+.pd-lightbox__figure {
+  width: min(100%, 1120px);
+  max-height: calc(100dvh - 3rem);
+  margin: 0;
+}
+
+.pd-lightbox__viewport {
+  width: 100%;
+  max-height: calc(100dvh - 6rem);
+  overflow: auto;
+  border-radius: 8px;
+  overscroll-behavior: contain;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pd-lightbox__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.pd-lightbox__viewport--panning {
+  cursor: grabbing;
+}
+
+.pd-lightbox__image {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.pd-lightbox__controls {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 51;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  border-radius: 9999px;
+  background: rgb(10 10 10 / 0.62);
+  transform: translateX(-50%);
+}
+
+.pd-lightbox__control {
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pd-lightbox__control:hover:not(:disabled) {
+  background: rgb(255 255 255 / 0.14);
+}
+
+.pd-lightbox__control:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.pd-lightbox__control--label {
+  min-width: 4rem;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pd-lightbox__close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgb(255 255 255 / 0.28);
+  border-radius: 9999px;
+  background: rgb(10 10 10 / 0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pd-lightbox__close:hover {
+  background: rgb(255 255 255 / 0.14);
+}
+
+@media (max-width: 640px) {
+  .pd-lightbox {
+    padding: 0.75rem;
+  }
+
+  .pd-lightbox__viewport {
+    max-height: calc(100dvh - 5rem);
+  }
 }
 
 .pd-empty {

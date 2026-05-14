@@ -34,7 +34,14 @@
           <h2 class="pd-section__heading">{{ section.heading }}</h2>
           <p class="pd-section__body">{{ section.body }}</p>
           @if (section.image) {
-            <img [src]="section.image" [alt]="section.heading" class="pd-section__image" />
+            <button
+              type="button"
+              class="pd-section__image-button"
+              [attr.aria-label]="'Open image: ' + section.heading"
+              (click)="openImage(section.image, section.heading)"
+            >
+              <img [src]="section.image" [alt]="section.heading" class="pd-section__image" />
+            </button>
           }
         </section>
       }
@@ -50,6 +57,73 @@
       </footer>
     }
   </article>
+
+  @if (expandedImage(); as image) {
+    <div
+      class="pd-lightbox"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="image.alt"
+      (click)="closeImage()"
+    >
+      <button
+        type="button"
+        class="pd-lightbox__close"
+        aria-label="Close expanded image"
+        (click)="closeImage()"
+      >
+        ×
+      </button>
+      <div class="pd-lightbox__controls" (click)="$event.stopPropagation()">
+        <button
+          type="button"
+          class="pd-lightbox__control"
+          aria-label="Zoom out"
+          [disabled]="imageZoom() <= 1"
+          (click)="zoomOut()"
+        >
+          −
+        </button>
+        <button
+          type="button"
+          class="pd-lightbox__control pd-lightbox__control--label"
+          aria-label="Reset zoom"
+          [disabled]="imageZoom() === 1"
+          (click)="resetZoom()"
+        >
+          {{ imageZoom() * 100 | number: '1.0-0' }}%
+        </button>
+        <button
+          type="button"
+          class="pd-lightbox__control"
+          aria-label="Zoom in"
+          [disabled]="imageZoom() >= 3"
+          (click)="zoomIn()"
+        >
+          +
+        </button>
+      </div>
+      <figure class="pd-lightbox__figure" (click)="$event.stopPropagation()">
+        <div
+          class="pd-lightbox__viewport"
+          [class.pd-lightbox__viewport--panning]="isPanning()"
+          (wheel)="zoomWithWheel($event)"
+          (pointerdown)="startPan($event)"
+          (pointermove)="panImage($event)"
+          (pointerup)="endPan($event)"
+          (pointercancel)="endPan($event)"
+          (pointerleave)="endPan($event)"
+        >
+          <img
+            [src]="image.src"
+            [alt]="image.alt"
+            class="pd-lightbox__image"
+            [style.width]="imageZoomPercent()"
+          />
+        </div>
+      </figure>
+    </div>
+  }
 } @else {
   <p class="pd-status" role="alert">{{ t().postDetail.notFound }}</p>
 }
