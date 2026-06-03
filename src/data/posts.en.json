@@ -1,5 +1,97 @@
 [
   {
+    "date": "2024-10-04",
+    "featured": false,
+    "id": "mvp-personal-agent",
+    "level": "deep",
+    "linkedin": "",
+    "sections": [
+      {
+        "body": "Need to automate journal and LinkedIn drafts",
+        "heading": "Problem"
+      },
+      {
+        "body": "Development of a multi-agent system using Google ADK, Python, and LiteLLM",
+        "heading": "Solution"
+      },
+      {
+        "body": "Importance of separating router from writers and ability to swap model by env var without touching code",
+        "heading": "Learning"
+      }
+    ],
+    "summary": "Development of a multi-agent system that automates journal and LinkedIn drafts using Google ADK, Python, and LiteLLM.",
+    "tags": [
+      "google-adk",
+      "python",
+      "lite-llm"
+    ],
+    "title": "MVP of personal-agent: multi-agent system on Google ADK",
+    "type": "project"
+  },
+  {
+    "date": "2024-09-16",
+    "featured": false,
+    "id": "completado-proyecto-mvp-agente-personal",
+    "level": "medium",
+    "linkedin": "",
+    "sections": [
+      {
+        "body": "The problem was to design and develop a personal agent that can interact with users effectively.",
+        "heading": "Problem"
+      },
+      {
+        "body": "The solution was to use programming and agent software design techniques to create an agent that can understand and respond to commands.",
+        "heading": "Solution"
+      },
+      {
+        "body": "I learned about the importance of programming and design in creating software agents.",
+        "heading": "Learning"
+      }
+    ],
+    "summary": "The personal agent MVP project has been completed. This project has allowed me to develop skills in programming and agent software design. The goal was to create an agent that can interact with users and perform basic tasks.",
+    "tags": [
+      "project",
+      "personal-agent",
+      "mvp"
+    ],
+    "title": "Completed Personal Agent MVP Project",
+    "type": "project"
+  },
+  {
+    "type": "project",
+    "summary": "I shipped the MVP of my personal-agent system, an autonomous multi-agent system built on Google ADK. The goal is to automate journal entries and LinkedIn drafts. A key architectural decision was separating the LLM router from the writer agents, allowing seamless model swapping via environment variables.",
+    "featured": false,
+    "level": "deep",
+    "date": "2024-07-30",
+    "id": "personal-agent-mvp",
+    "linkedin": "",
+    "sections": [
+      {
+        "body": "Automating personal content generation (journal, LinkedIn) required a robust, flexible AI system. Traditional monolithic approaches would tightly couple LLM providers, making future changes difficult.",
+        "heading": "Problem"
+      },
+      {
+        "body": "I developed a multi-agent system using Python and Google ADK. LiteLLM was crucial for routing requests to different LLMs (Gemini, Claude, GPT) based on the agent's role. The core innovation was decoupling the router logic from the individual writer agents, enabling dynamic LLM selection by simply changing an environment variable without code modifications.",
+        "heading": "Solution"
+      },
+      {
+        "body": "The modular architecture, especially the router/writer separation, proved invaluable. It significantly increased flexibility and maintainability, allowing me to experiment with different LLM capabilities and costs without refactoring core agent logic. This pattern will be essential for future autonomous agent development.",
+        "heading": "Learning"
+      }
+    ],
+    "tags": [
+      "python",
+      "adk",
+      "llm",
+      "multi-agent",
+      "litellm",
+      "gemini",
+      "claude",
+      "gpt"
+    ],
+    "title": "Building a Multi-Agent Personal Assistant MVP with ADK and LiteLLM"
+  },
+  {
     "id": "tobias-agent-toolkit-marketplace",
     "title": "I turned my agent workflows into a reusable marketplace",
     "date": "2026-05-14",

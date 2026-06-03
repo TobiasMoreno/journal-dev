@@ -1,7 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  HostListener,
   computed,
   effect,
   inject,
@@ -21,6 +20,9 @@ import { SeoService } from '../../core/services/seo.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './post-detail.html',
   styleUrl: './post-detail.css',
+  host: {
+    '(document:keydown.escape)': 'closeImageOnEscape()',
+  },
 })
 export class PostDetailComponent {
   private readonly postService = inject(PostService);
@@ -144,7 +146,6 @@ export class PostDetailComponent {
     this.isPanning.set(false);
   }
 
-  @HostListener('document:keydown.escape')
   closeImageOnEscape(): void {
     this.closeImage();
   }

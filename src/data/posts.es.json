@@ -1,5 +1,97 @@
 [
   {
+    "date": "2024-10-04",
+    "featured": false,
+    "id": "mvp-personal-agent",
+    "level": "deep",
+    "linkedin": "",
+    "sections": [
+      {
+        "body": "Necesidad de automatizar journal y drafts de LinkedIn",
+        "heading": "Problema"
+      },
+      {
+        "body": "Desarrollo de un sistema multi-agente utilizando Google ADK, Python y LiteLLM",
+        "heading": "Solución"
+      },
+      {
+        "body": "Importancia de separar router de writers y posibilidad de swappear modelo por env var sin tocar código",
+        "heading": "Aprendizaje"
+      }
+    ],
+    "summary": "Desarrollo de un sistema multi-agente que automatiza journal y drafts de LinkedIn utilizando Google ADK, Python y LiteLLM.",
+    "tags": [
+      "google-adk",
+      "python",
+      "lite-llm"
+    ],
+    "title": "MVP de personal-agent: sistema multi-agente sobre Google ADK",
+    "type": "project"
+  },
+  {
+    "date": "2024-09-16",
+    "featured": false,
+    "id": "completado-proyecto-mvp-agente-personal",
+    "level": "medium",
+    "linkedin": "",
+    "sections": [
+      {
+        "body": "El problema era diseñar y desarrollar un agente personal que pueda interactuar con usuarios de manera efectiva.",
+        "heading": "Problema"
+      },
+      {
+        "body": "La solución fue utilizar técnicas de programación y diseño de agentes de software para crear un agente que pueda entender y responder a comandos.",
+        "heading": "Solución"
+      },
+      {
+        "body": "Aprendí sobre la importancia de la programación y el diseño en la creación de agentes de software.",
+        "heading": "Aprendizaje"
+      }
+    ],
+    "summary": "Se ha completado el proyecto MVP de agente personal. Este proyecto ha permitido desarrollar habilidades en programación y diseño de agentes de software. El objetivo era crear un agente que pueda interactuar con usuarios y realizar tareas básicas.",
+    "tags": [
+      "proyecto",
+      "agente-personal",
+      "mvp"
+    ],
+    "title": "Proyecto MVP de agente personal completado",
+    "type": "project"
+  },
+  {
+    "summary": "Terminé el MVP de mi sistema de agente personal, una arquitectura multi-agente autónoma sobre Google ADK. El objetivo es automatizar mis entradas de journal y borradores de LinkedIn. Una decisión arquitectónica clave fue la separación del enrutador de LLMs de los agentes escritores, lo que permite cambiar de modelo fácilmente mediante variables de entorno sin modificar el código.",
+    "featured": false,
+    "level": "deep",
+    "type": "project",
+    "linkedin": "",
+    "title": "MVP de Agente Personal Multi-Agente con ADK y LiteLLM",
+    "sections": [
+      {
+        "body": "La automatización de la generación de contenido personal (journal, LinkedIn) exigía un sistema de IA robusto y flexible. Los enfoques monolíticos tradicionales acoplarían rígidamente a los proveedores de LLM, complicando futuros cambios.",
+        "heading": "Problema"
+      },
+      {
+        "body": "Desarrollé un sistema multi-agente utilizando Python y Google ADK. LiteLLM fue fundamental para enrutar las solicitudes a diferentes LLMs (Gemini, Claude, GPT) según el rol del agente. La innovación central fue desacoplar la lógica del enrutador de los agentes escritores individuales, permitiendo la selección dinámica de LLMs simplemente cambiando una variable de entorno sin necesidad de modificar el código.",
+        "heading": "Solución"
+      },
+      {
+        "body": "La arquitectura modular, especialmente la separación entre el enrutador y los escritores, resultó inestimable. Aumentó significativamente la flexibilidad y la mantenibilidad, permitiéndome experimentar con diferentes capacidades y costos de LLM sin refactorizar la lógica central de los agentes. Este patrón será esencial para el desarrollo futuro de agentes autónomos.",
+        "heading": "Aprendizaje"
+      }
+    ],
+    "tags": [
+      "python",
+      "adk",
+      "llm",
+      "multi-agent",
+      "litellm",
+      "gemini",
+      "claude",
+      "gpt"
+    ],
+    "date": "2024-07-30",
+    "id": "personal-agent-mvp"
+  },
+  {
     "id": "tobias-agent-toolkit-marketplace",
     "title": "Convertí mis workflows de agentes en un marketplace reutilizable",
     "date": "2026-05-14",
