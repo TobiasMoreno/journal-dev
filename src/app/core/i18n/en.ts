@@ -7,12 +7,12 @@ export const en: Translations = {
     about: 'About',
   },
   footer: {
-    role: 'Backend Engineer',
+    role: 'Software Developer',
     cta: "Did anything resonate? Let's talk.",
   },
   home: {
     hero: {
-      titleLine1: 'Backend Engineer.',
+      titleLine1: 'Software Developer.',
       titleLine2: 'Documenting the evolution.',
       sub: 'Technical learnings, professional decisions, and real mistakes. All in public, all unfiltered.',
     },
@@ -47,10 +47,10 @@ export const en: Translations = {
     sub: 'Who I am, how I work, what I look for. No clichés.',
     identity: {
       heading: 'Identity',
-      p1before: "I'm Tobias Moreno, Backend Engineer at Techforb, working on",
+      p1before: "I'm Tobias Moreno. I'm a Software Developer, working on",
       p1after:
-        " — a fintech focused on digital credit. I live in Córdoba, Argentina, and I've been building software for 2 years, the last one in backend fintech.",
-      p2: 'I currently work with Java, Spring Boot, and NestJS, on systems that move real money for real people. That orders priorities fast: what breaks matters more than what looks good in a demo.',
+        " — a fintech focused on digital credit — from March 2025 to May 2026. I live in Córdoba, Argentina, and I've been building software for 2 years.",
+      p2: 'I worked on frontend development with Angular and TypeScript, REST API integration, persistence with JPA, Hibernate, and SQL, and automated testing with JUnit and Mockito. That experience ordered priorities fast: what breaks matters more than what looks good in a demo.',
     },
     howIWork: {
       heading: 'How I work',
@@ -69,10 +69,12 @@ export const en: Translations = {
     },
     stack: {
       heading: 'Current stack',
-      languages: 'Languages: Java, TypeScript, SQL',
-      backend: 'Backend: Spring Boot, NestJS',
-      infra: 'Infra: Docker, Kubernetes, AWS',
-      data: 'Data: PostgreSQL, MongoDB, Redis',
+      languages: 'Languages: Java, TypeScript, SQL, Go',
+      backend: 'Backend: Spring Boot, NestJS, Node.js, Go',
+      frontend: 'Frontend: Angular, Vue, TypeScript',
+      infra: 'Cloud & DevOps: AWS, CloudWatch, Docker, GitHub Actions, CI/CD',
+      data: 'Data: PostgreSQL, MongoDB, JPA, Hibernate',
+      testing: 'Testing: Jest, Cypress, Postman, Newman, JUnit, Mockito',
       tools: 'Tools: Cursor, Claude Code, Codex',
     },
     path: {
@@ -97,12 +99,12 @@ export const en: Translations = {
   },
   now: {
     title: 'Now',
-    updated: 'Updated: May 2026',
+    updated: 'Updated: June 2026',
     learning: {
       heading: 'Learning',
       items: [
         'AI Agents: architecture, patterns and implementation',
-        'Software Design Documents (SDD)',
+        'Spec-Driven Development (SDD)',
         'LLM Tokens: tokenization, pricing and optimization',
         'Best language models: selection criteria and use cases',
         'Skills optimization for AI agents',
@@ -114,7 +116,11 @@ export const en: Translations = {
     },
     building: {
       heading: 'Building',
-      items: ['This journal — journal-dev', 'Exploring resilient API design in Spring Boot'],
+      items: [
+        'This journal — journal-dev',
+        'Tobias Agent Toolkit / Marketplace for AI development workflows and Spec-Driven Development (SDD)',
+        'REST API in Go with layered architecture: handlers, services, repositories, models, and routes',
+      ],
     },
     reading: {
       heading: 'Reading',

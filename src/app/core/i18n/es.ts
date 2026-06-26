@@ -7,12 +7,12 @@ export const es: Translations = {
     about: 'Sobre Mí',
   },
   footer: {
-    role: 'Backend Engineer',
+    role: 'Software Developer',
     cta: '¿Te resonó algo? Hablemos.',
   },
   home: {
     hero: {
-      titleLine1: 'Backend Engineer.',
+      titleLine1: 'Software Developer.',
       titleLine2: 'Documentando la evolución.',
       sub: 'Aprendizajes técnicos, decisiones profesionales y errores reales. Todo en público, todo sin filtro.',
     },
@@ -47,9 +47,10 @@ export const es: Translations = {
     sub: 'Quién soy, cómo trabajo, qué busco. Sin clichés.',
     identity: {
       heading: 'Identidad',
-      p1before: 'Soy Tobias Moreno, Backend Engineer en Techforb, trabajando en',
-      p1after: ' — una fintech con foco en crédito digital. Vivo en Córdoba, Argentina, y vengo desarrollando software hace 2 años, el último en backend fintech.',
-      p2: 'Hoy trabajo con Java, Spring Boot y NestJS, en sistemas que mueven dinero real para gente real. Eso ordena prioridades rápido: lo que rompe importa más que lo que se ve lindo en un demo.',
+      p1before: 'Soy Tobias Moreno. Soy Software Developer, trabajando en',
+      p1after:
+        ' — una fintech con foco en crédito digital — desde marzo de 2025 hasta mayo de 2026. Vivo en Córdoba, Argentina, y vengo desarrollando software hace 2 años.',
+      p2: 'Trabajé en frontend con Angular y TypeScript, integración con APIs REST, persistencia con JPA, Hibernate y SQL, y pruebas automatizadas con JUnit y Mockito. Esa experiencia me ordenó prioridades rápido: lo que rompe importa más que lo que se ve lindo en un demo.',
     },
     howIWork: {
       heading: 'Cómo trabajo',
@@ -68,10 +69,12 @@ export const es: Translations = {
     },
     stack: {
       heading: 'Stack actual',
-      languages: 'Lenguajes: Java, TypeScript, SQL',
-      backend: 'Backend: Spring Boot, NestJS',
-      infra: 'Infra: Docker, Kubernetes, AWS',
-      data: 'Datos: PostgreSQL, MongoDB, Redis',
+      languages: 'Lenguajes: Java, TypeScript, SQL, Go',
+      backend: 'Backend: Spring Boot, NestJS, Node.js, Go',
+      frontend: 'Frontend: Angular, Vue, TypeScript',
+      infra: 'Cloud & DevOps: AWS, CloudWatch, Docker, GitHub Actions, CI/CD',
+      data: 'Datos: PostgreSQL, MongoDB, JPA, Hibernate',
+      testing: 'Testing: Jest, Cypress, Postman, Newman, JUnit, Mockito',
       tools: 'Herramientas: Cursor, Claude Code, Codex',
     },
     path: {
@@ -96,12 +99,12 @@ export const es: Translations = {
   },
   now: {
     title: 'Hoy',
-    updated: 'Actualizado: Mayo 2026',
+    updated: 'Actualizado: Junio 2026',
     learning: {
       heading: 'Aprendiendo',
       items: [
         'Agentes de IA: arquitectura, patrones e implementación',
-        'Documentos de Diseño de Software (SDD)',
+        'Spec-Driven Development (SDD)',
         'Tokens LLM: tokenización, precios y optimización',
         'Mejores modelos de lenguaje: criterios de selección y casos de uso',
         'Optimización de skills para agentes de IA',
@@ -113,7 +116,11 @@ export const es: Translations = {
     },
     building: {
       heading: 'Construyendo',
-      items: ['Este journal — journal-dev', 'Explorando diseño de APIs resilientes en Spring Boot'],
+      items: [
+        'Este journal — journal-dev',
+        'Tobias Agent Toolkit / Marketplace para workflows de desarrollo con IA y Spec-Driven Development (SDD)',
+        'API REST en Go con arquitectura por capas: handlers, services, repositories, models y routes',
+      ],
     },
     reading: {
       heading: 'Leyendo',

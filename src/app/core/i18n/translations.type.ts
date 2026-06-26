@@ -64,8 +64,10 @@ export interface Translations {
       heading: string;
       languages: string;
       backend: string;
+      frontend: string;
       infra: string;
       data: string;
+      testing: string;
       tools: string;
     };
     path: {
